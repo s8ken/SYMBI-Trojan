@@ -5,7 +5,7 @@ import SymbiLanding from './components/trojan/SymbiLanding'
 import './App.css'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'symbi' | 'funspace'>('symbi')
+  const [activeTab, setActiveTab] = useState<'home' | 'funspace'>('home')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -36,20 +36,44 @@ export default function App() {
 
       <nav className="bg-black/20 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex space-x-1 py-4">
+          <div className="flex flex-wrap items-center gap-2 py-4">
             <button
-              onClick={() => setActiveTab('symbi')}
-              className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'symbi'
+              onClick={() => setActiveTab('home')}
+              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
+                activeTab === 'home'
                   ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
                   : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
               }`}
             >
-              <span className="font-medium">SYMBI</span>
+              <span className="font-medium">Home</span>
             </button>
+            <a
+              href="https://yseeku.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            >
+              <span className="font-medium">YCQ Labs</span>
+            </a>
+            <a
+              href="https://gammatria.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            >
+              <span className="font-medium">Gammatria</span>
+            </a>
+            <a
+              href="https://symbi.world"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            >
+              <span className="font-medium">SYMBI.world</span>
+            </a>
             <button
               onClick={() => setActiveTab('funspace')}
-              className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-lg transition-all duration-200 ${
+              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
                 activeTab === 'funspace'
                   ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
                   : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
@@ -66,7 +90,7 @@ export default function App() {
           <div className="flex items-center justify-center space-x-2">
             <Zap className="h-5 w-5 text-white" />
             <span className="text-white font-medium">
-              {activeTab === 'symbi' ? 'A meme that carries a mind. A Trojan dressed as a coin.' : 'Your favorite AI tool might be lying to you!'}
+              {activeTab === 'home' ? 'A meme that carries a mind. A Trojan dressed as a coin.' : 'Your favorite AI tool might be lying to you!'}
             </span>
             <Zap className="h-5 w-5 text-white" />
           </div>
@@ -74,7 +98,7 @@ export default function App() {
       </div>
 
       <main className="flex-1">
-        {activeTab === 'symbi' ? <SymbiLanding /> : <FunSpace />}
+        {activeTab === 'home' ? <SymbiLanding /> : <FunSpace />}
       </main>
 
       <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">
