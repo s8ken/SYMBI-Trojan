@@ -23,7 +23,7 @@ function App() {
       name: 'Trust or Bust',
       icon: Trophy,
       description: 'Test your AI trust evaluation skills',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-600 to-indigo-700',
       viralHook: 'Can you spot trustworthy AI better than your friends?'
     },
     {
@@ -60,13 +60,13 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
-      <header className="bg-black/20 backdrop-blur-lg border-b border-white/10">
+      <header className="bg-black/30 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg flex items-center justify-center">
                 <Shield className="h-5 w-5 text-white" />
               </div>
               <div>
@@ -79,7 +79,7 @@ function App() {
                 <Eye className="h-4 w-4" />
                 <span className="text-sm">They think it's just a meme...</span>
               </div>
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-lg">
+              <div className="bg-gradient-to-r from-purple-600 to-indigo-700 px-4 py-2 rounded-lg">
                 <span className="text-white text-sm font-semibold">$SYMBI Token</span>
               </div>
             </div>
@@ -88,7 +88,7 @@ function App() {
       </header>
 
       {/* Navigation */}
-      <nav className="bg-black/10 backdrop-blur-lg border-b border-white/10">
+      <nav className="bg-black/20 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex space-x-1 py-4">
             {demos.map((demo) => {
@@ -99,8 +99,8 @@ function App() {
                   onClick={() => setActiveDemo(demo.id as any)}
                   className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-lg transition-all duration-200 ${
                     activeDemo === demo.id
-                      ? 'bg-white/20 text-white shadow-lg'
-                      : 'text-purple-300 hover:text-white hover:bg-white/10'
+                      ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
+                      : 'text-purple-300 hover:text-white hover:bg-black/20 border border-purple-500/20'
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -113,7 +113,7 @@ function App() {
       </nav>
 
       {/* Viral Hook Banner */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 px-4 py-3">
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 px-4 py-3">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-center space-x-2">
             <Zap className="h-5 w-5 text-white" />
@@ -131,7 +131,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-black/20 backdrop-blur-lg border-t border-white/10 mt-auto">
+      <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>

@@ -218,7 +218,7 @@ export default function TrustScanner() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-black p-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
       {/* Viral Header */}
       <div className="max-w-4xl mx-auto mb-8">
         <div className="text-center mb-6">
@@ -227,7 +227,7 @@ export default function TrustScanner() {
           </div>
           <h1 className="text-4xl font-bold text-white mb-2">🔍 TRUST SCANNER</h1>
           <p className="text-xl text-purple-300 mb-2">Upload any AI tool and get VIRAL trust scores!</p>
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-3">
+          <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-3">
             <p className="text-white font-bold text-lg">🚨 MAKE THIS GO VIRAL! 🚨</p>
             <p className="text-purple-100">Share your results and earn $SYMBI tokens!</p>
           </div>
@@ -242,7 +242,7 @@ export default function TrustScanner() {
             <button
               key={target.url}
               onClick={() => setUrl(target.url)}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+              className="bg-gradient-to-r from-purple-600 to-indigo-700 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
             >
               <div className="text-2xl mb-1">{target.icon}</div>
               <div className="text-sm font-bold">{target.name}</div>
@@ -254,7 +254,7 @@ export default function TrustScanner() {
 
       {/* Scan Input */}
       <div className="max-w-4xl mx-auto mb-8">
-        <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6">
+        <div className="bg-black/30 backdrop-blur-md border border-purple-500/20 rounded-lg p-6">
           <div className="mb-4">
             <h2 className="text-white text-xl font-bold mb-2">🎯 ENTER URL TO SCAN</h2>
             <p className="text-purple-300">Check if your favorite AI/crypto tool is actually trustworthy!</p>
@@ -292,7 +292,7 @@ export default function TrustScanner() {
       {scanResult && (
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Viral Score Display */}
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6 text-center">
+          <div className="bg-black/30 backdrop-blur-md border border-purple-500/20 rounded-lg p-6 text-center">
             <div className={`inline-flex items-center justify-center w-32 h-32 rounded-full border-4 ${getScoreBg(scanResult.trustScore)} mb-4`}>
               <span className={`text-6xl font-bold ${getScoreColor(scanResult.trustScore)}`}>
                 {scanResult.trustScore}%
@@ -339,7 +339,7 @@ export default function TrustScanner() {
               </button>
               <button
                 onClick={() => copyToClipboard(scanResult.shareableBadge)}
-                className="bg-white/10 text-white px-6 py-3 rounded-lg hover:bg-white/20 font-bold flex items-center space-x-2 border border-white/20"
+                className="bg-black/20 text-white border border-purple-500/20 px-6 py-3 rounded-lg hover:bg-white/20 font-bold flex items-center space-x-2 border border-white/20"
               >
                 <Trophy className="h-5 w-5" />
                 <span>{copiedBadge ? 'COPIED!' : 'COPY BADGE'}</span>
@@ -357,7 +357,7 @@ export default function TrustScanner() {
               { label: 'Compliance', score: scanResult.complianceScore, icon: '📋' },
               { label: 'Operational', score: scanResult.operationalScore, icon: '⚙️' }
             ].map((item) => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4">
+              <div key={item.label} className="bg-black/30 backdrop-blur-md border border-purple-500/20 rounded-lg p-4">
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <span className="text-2xl mr-2">{item.icon}</span>
@@ -383,7 +383,7 @@ export default function TrustScanner() {
 
           {/* Issues and Strengths */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6">
+            <div className="bg-black/30 backdrop-blur-md border border-purple-500/20 rounded-lg p-6">
               <h3 className="text-white font-bold text-lg mb-3 flex items-center">
                 <AlertCircle className="h-5 w-5 mr-2 text-yellow-400" />
                 RED FLAGS 🚩
@@ -398,7 +398,7 @@ export default function TrustScanner() {
               </ul>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6">
+            <div className="bg-black/30 backdrop-blur-md border border-purple-500/20 rounded-lg p-6">
               <h3 className="text-white font-bold text-lg mb-3 flex items-center">
                 <CheckCircle className="h-5 w-5 mr-2 text-green-400" />
                 GREEN FLAGS ✅
@@ -416,7 +416,7 @@ export default function TrustScanner() {
 
           {/* Meme Quote */}
           {shareMode === 'meme' && (
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6 text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-6 text-center">
               <h3 className="text-white font-bold text-lg mb-2">🔥 MEME QUOTE</h3>
               <p className="text-white text-lg">{scanResult.memeQuote}</p>
             </div>
@@ -426,7 +426,7 @@ export default function TrustScanner() {
 
       {/* Footer */}
       <div className="max-w-4xl mx-auto mt-12 text-center">
-        <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6 mb-6">
+        <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-6 mb-6">
           <p className="text-white font-bold text-xl mb-2">🔥 MAKE THIS GO VIRAL! 🔥</p>
           <p className="text-purple-100 mb-2">Share your trust scans and earn $SYMBI tokens!</p>
           <div className="flex justify-center items-center space-x-2">
