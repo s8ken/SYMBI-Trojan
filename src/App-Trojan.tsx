@@ -100,7 +100,7 @@ function App() {
                   className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 rounded-lg transition-all duration-200 ${
                     activeDemo === demo.id
                       ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                      : 'text-purple-300 hover:text-white hover:bg-black/20 border border-purple-500/20'
+                      : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -175,3 +175,4 @@ function App() {
 }
 
 export default App;
+
