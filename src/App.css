@@ -169,3 +169,16 @@
 .dark ::-webkit-scrollbar-thumb:hover {
   background: #4f46e5;
 }
+
+.hero-glow {
+  animation: symbiGlow 3s ease-in-out infinite;
+}
+
+@keyframes symbiGlow {
+  0%, 100% {
+    text-shadow: 0 0 0px rgba(139, 92, 246, 0.0), 0 0 0px rgba(34, 211, 238, 0.0);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(139, 92, 246, 0.6), 0 0 24px rgba(34, 211, 238, 0.4);
+  }
+}

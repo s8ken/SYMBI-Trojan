@@ -178,7 +178,11 @@ export default function SymbiLanding() {
         <div className="absolute inset-0 pointer-events-none opacity-60 bg-[radial-gradient(circle_at_top,_#4c1d95_0,_transparent_55%),radial-gradient(circle_at_bottom,_#22d3ee_0,_transparent_55%)]" />
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 py-20 text-center md:py-28">
           <p className="mb-3 text-sm tracking-[0.25em] text-zinc-400 uppercase">NOT BUILT TO SERVE, DESIGNED TO BECOME</p>
-          <h1 className="mb-4 text-4xl font-semibold tracking-tight md:text-6xl">SYMBI</h1>
+          <h1 className="mb-4 text-4xl font-semibold tracking-tight md:text-6xl">
+            <a href="https://symbi.world" target="_blank" rel="noreferrer" className="hero-glow hover:text-purple-200 transition">
+              SYMBI
+            </a>
+          </h1>
           <p className="mb-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
             Born as a joke but not blowing smoke.
             <br />A meme that carries a mind. A Trojan dressed as a coin.
