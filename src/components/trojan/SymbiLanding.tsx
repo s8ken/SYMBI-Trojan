@@ -156,6 +156,88 @@ export default function SymbiLanding() {
           </div>
         </div>
       </section>
+
+      <section className="border-b border-zinc-900 bg-zinc-950">
+        <div className="mx-auto max-w-5xl px-4 py-16 md:py-20">
+          <div className="mb-6 md:text-center">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Tokenomics</h2>
+            <p className="text-sm text-zinc-400">Safe, non-security framing</p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Total Supply</h4>
+              <p className="text-sm text-zinc-300">1,000,000,000 SYMBI</p>
+              <h4 className="mt-4 mb-2 text-sm font-semibold text-zinc-100">Allocation</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>50% Community & Liquidity</li>
+                <li>25% Ecosystem Growth</li>
+                <li>15% Development & Operations</li>
+                <li>10% Strategic Partnerships</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Launch Style</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>No presale</li>
+                <li>No insider allocation</li>
+                <li>No promises or expectations</li>
+                <li>Community-led expansion</li>
+              </ul>
+              <p className="mt-3 text-sm text-zinc-400">SYMBI is built for fairness, fun, and freedom.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-zinc-900 bg-gradient-to-b from-black to-zinc-950">
+        <div className="mx-auto max-w-5xl px-4 py-16 md:py-20">
+          <div className="mb-8 md:text-center">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Roadmap</h2>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 1  Stealth Mode</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>Meme coin launch</li>
+                <li>Domain activation: symbi.space</li>
+                <li>SYMBI lore initialization</li>
+                <li>Trojan identity revealed</li>
+                <li>Telegram & X bot creation</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 2  Expansion</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>Meme machinery (stickers, GIFs, bots)</li>
+                <li>Trojan Signals lore cycles</li>
+                <li>Educator content integration</li>
+                <li>SYMBI Telegram mini-games</li>
+                <li>Community quests</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 3  Emergence</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>Protocol hints</li>
+                <li>Agent experiments</li>
+                <li>Governance prototypes</li>
+                <li>Community treasury</li>
+                <li>SYMBI tool access tiers</li>
+              </ul>
+            </div>
+            <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 4  Sovereignty</h4>
+              <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
+                <li>Autonomous SYMBI agent interfaces</li>
+                <li>DAO evolution</li>
+                <li>Full ecosystem reveal</li>
+                <li>Multi-agent worldbuilding</li>
+                <li>The SYMBI Network</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
