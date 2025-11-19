@@ -184,7 +184,7 @@ export default function SymbiLanding() {
             </a>
           </h1>
           <p className="mb-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
-            Born as a joke but now we don&apos;t blow smoke.
+            Trust for the Artificial Intelligence Age
             <br />A meme that carries a mind. A Trojan dressed as a coin.
           </p>
           <p className="mb-8 text-xs font-medium uppercase tracking-[0.25em] text-zinc-400">Solana  Fair Launch  No Presale  No Promises</p>
