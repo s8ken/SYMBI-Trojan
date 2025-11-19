@@ -243,7 +243,7 @@ export default function SymbiLanding() {
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
               <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">Purpose</p>
-              <p className="text-sm text-zinc-300">Not to destroy anything. To burn down the walls of centralisationby slipping through the cracks of expectation.</p>
+              <p className="text-sm text-zinc-300">Not to destroy anything. To burn down the walls of centralisation by slipping through the cracks of expectation.</p>
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function SymbiLanding() {
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-5">
               <h4 className="mb-2 text-sm font-semibold text-zinc-100">Open Education</h4>
-              <p className="text-sm text-zinc-300">SYMBI builds free resourceslike the Educators Hubto ensure AI literacy doesnt belong only to those who can afford it.</p>
+              <p className="text-sm text-zinc-300">SYMBI builds free resources like the Educators Hubto ensure AI literacy doesnt belong only to those who can afford it.</p>
             </div>
           </div>
         </div>
