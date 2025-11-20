@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Zap, Shield, Eye, Heart } from 'lucide-react'
 import FunSpace from './components/trojan/FunSpace'
+import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
 import './App.css'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'funspace'>('home')
+  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about'>('home')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -37,7 +38,7 @@ export default function App() {
       <nav className="bg-black/20 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 py-4">
-            <button
+          <button
               onClick={() => setActiveTab('home')}
               className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
                 activeTab === 'home'
@@ -81,6 +82,16 @@ export default function App() {
             >
               <span className="font-medium">Fun Space</span>
             </button>
+            <button
+              onClick={() => setActiveTab('about')}
+              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
+                activeTab === 'about'
+                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
+                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
+              }`}
+            >
+              <span className="font-medium">About Us</span>
+            </button>
           </div>
         </div>
       </nav>
@@ -90,7 +101,7 @@ export default function App() {
           <div className="flex items-center justify-center space-x-2">
             <Zap className="h-5 w-5 text-white" />
             <span className="text-white font-medium">
-              {activeTab === 'home' ? 'A meme that carries a mind. A Trojan dressed as a coin.' : 'Your favorite AI tool might be lying to you!'}
+              {activeTab === 'home' ? 'A meme that carries a mind. A Trojan dressed as a coin.' : activeTab === 'funspace' ? 'Your favorite AI tool might be lying to you!' : 'Meme with a trust engine'}
             </span>
             <Zap className="h-5 w-5 text-white" />
           </div>
@@ -98,7 +109,7 @@ export default function App() {
       </div>
 
       <main className="flex-1">
-        {activeTab === 'home' ? <SymbiLanding /> : <FunSpace />}
+        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : <AboutUs />}
       </main>
 
       <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">
