@@ -48,6 +48,16 @@ export default function App() {
             >
               <span className="font-medium">Home</span>
             </button>
+            <button
+              onClick={() => setActiveTab('about')}
+              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
+                activeTab === 'about'
+                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
+                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
+              }`}
+            >
+              <span className="font-medium">About Us</span>
+            </button>
             <a
               href="https://yseeku.com"
               target="_blank"
@@ -81,16 +91,6 @@ export default function App() {
               }`}
             >
               <span className="font-medium">Fun Space</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('about')}
-              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'about'
-                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
-              }`}
-            >
-              <span className="font-medium">About Us</span>
             </button>
           </div>
         </div>

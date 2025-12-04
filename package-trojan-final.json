@@ -1,6 +1,6 @@
 {
   "name": "symbi-trojan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SYMBI Trojan - Viral Trust Infrastructure Demo Platform",
   "main": "index.js",
   "scripts": {
