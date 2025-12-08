@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "package-trojan-final.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist-trojan",

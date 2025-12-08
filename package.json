@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite --config vite.config.trojan-final.ts --port 3001",
-    "build": "vite build --config vite.config.trojan-final.ts",
+    "build": "node scripts/write-version.js && vite build --config vite.config.trojan-final.ts",
     "preview": "vite preview --config vite.config.trojan-final.ts --port 3001",
     "deploy": "npm run build && vercel --prod"
   },
