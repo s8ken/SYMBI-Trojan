@@ -3,10 +3,11 @@ import { Zap, Shield, Eye, Heart } from 'lucide-react'
 import FunSpace from './components/trojan/FunSpace'
 import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
+import DemoEmbed from './components/trojan/DemoEmbed'
 import './App.css'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about'>('home')
+  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about' | 'demo'>('home')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -83,6 +84,16 @@ export default function App() {
               <span className="font-medium">SYMBI.world</span>
             </a>
             <button
+              onClick={() => setActiveTab('demo')}
+              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
+                activeTab === 'demo'
+                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
+                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
+              }`}
+            >
+              <span className="font-medium">Demo</span>
+            </button>
+            <button
               onClick={() => setActiveTab('funspace')}
               className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
                 activeTab === 'funspace'
@@ -109,7 +120,7 @@ export default function App() {
       </div>
 
       <main className="flex-1">
-        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : <AboutUs />}
+        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : activeTab === 'demo' ? <DemoEmbed /> : <AboutUs />}
       </main>
 
       <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">
