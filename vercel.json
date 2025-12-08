@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package-trojan-final.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist-trojan",
+        "buildCommand": "npm install && npm run build"
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/demo", "dest": "/demo101.html" },
+    { "src": "/demo.html", "dest": "/demo101.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ],
+  "env": {
+    "VITE_SOLANA_RPC_URL": "@solana-rpc-url",
+    "VITE_SYMBI_TOKEN_ADDRESS": "@symbi-token-address"
+  }
+}
