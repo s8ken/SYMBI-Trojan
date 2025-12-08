@@ -112,7 +112,7 @@ export default function App() {
           <div className="flex items-center justify-center space-x-2">
             <Zap className="h-5 w-5 text-white" />
             <span className="text-white font-medium">
-              {activeTab === 'home' ? 'A meme that carries a mind. A Trojan dressed as a coin.' : activeTab === 'funspace' ? 'Your favorite AI tool might be lying to you!' : 'Meme with a trust engine'}
+              {activeTab === 'home' ? 'Trust Infra dressed as a meme coin' : activeTab === 'funspace' ? 'Your favorite AI tool might be lying to you!' : 'Meme with a trust engine'}
             </span>
             <Zap className="h-5 w-5 text-white" />
           </div>
