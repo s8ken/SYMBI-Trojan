@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Zap, Shield, Eye, Heart } from 'lucide-react'
+import { Zap, Shield, Heart } from 'lucide-react'
 import FunSpace from './components/trojan/FunSpace'
 import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
@@ -24,10 +24,6 @@ export default function App() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2 text-purple-300">
-                <Eye className="h-4 w-4" />
-                <span className="text-sm">They think it's just a meme...</span>
-              </div>
               <div className="bg-gradient-to-r from-purple-600 to-indigo-700 px-4 py-2 rounded-lg">
                 <span className="text-white text-sm font-semibold">$SYMBI Token</span>
               </div>
