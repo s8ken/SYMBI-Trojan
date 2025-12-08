@@ -5,6 +5,7 @@ import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
 import DemoEmbed from './components/trojan/DemoEmbed'
 import './App.css'
+import { BUILD_SHA, BUILD_TIME } from './build-info'
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about' | 'demo'>('home')
@@ -149,6 +150,7 @@ export default function App() {
           </div>
           <div className="border-t border-white/10 mt-8 pt-8 text-center">
             <p className="text-purple-300 text-sm"> 2025 SYMBI Trojan. They came for the meme, they stayed for the revolution.</p>
+            <p className="text-purple-400 text-xs mt-2">Build {BUILD_SHA} • {BUILD_TIME}</p>
           </div>
         </div>
       </footer>
