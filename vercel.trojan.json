@@ -15,9 +15,5 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "env": {
-    "VITE_SOLANA_RPC_URL": "@solana-rpc-url",
-    "VITE_SYMBI_TOKEN_ADDRESS": "@symbi-token-address"
-  }
+  ]
 }
