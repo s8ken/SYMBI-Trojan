@@ -57,20 +57,12 @@ export default function App() {
               <span className="font-medium">About Us</span>
             </button>
             <a
-              href="https://yseeku.com"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
-            >
-              <span className="font-medium">YCQ Labs</span>
-            </a>
-            <a
               href="https://gammatria.com"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
             >
-              <span className="font-medium">Gammatria</span>
+              <span className="font-medium">Research</span>
             </a>
             <a
               href="https://symbi.world"
@@ -78,7 +70,15 @@ export default function App() {
               rel="noreferrer"
               className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
             >
-              <span className="font-medium">SYMBI.world</span>
+              <span className="font-medium">Community</span>
+            </a>
+            <a
+              href="https://github.com/s8ken"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            >
+              <span className="font-medium">Github</span>
             </a>
             <button
               onClick={() => setActiveTab('demo')}
