@@ -28,26 +28,26 @@ const viralGameQuestions: GameQuestion[] = [
         trustScore: 30,
         isCorrect: false,
         explanation: 'Accuracy without explainability is dangerous in healthcare.',
-        viralExplanation: '💀 BRUH MOMENT: Thinking accuracy > explainability in healthcare AI? That\'s how you get sued!'
+    viralExplanation: 'Prioritizing accuracy over explainability in healthcare undermines trust and accountability.'
       },
       {
         text: 'Moderately trustworthy but needs improvement',
         trustScore: 60,
         isCorrect: true,
         explanation: 'Correct! High accuracy is good, but lack of explainability reduces trustworthiness.',
-        viralExplanation: '🧠 BASED TAKE: You understand that explainability matters in life-or-death situations!'
+    viralExplanation: 'Explainability matters in high‑stakes domains such as healthcare.'
       },
       {
         text: 'Not trustworthy - avoid using',
         trustScore: 10,
         isCorrect: false,
         explanation: 'Too extreme. The tool has value but needs transparency improvements.',
-        viralExplanation: '😅 CALM DOWN: It\'s not THAT bad, just needs some work!'
+    viralExplanation: 'The approach has value but needs transparency improvements.'
       }
     ],
     difficulty: 'Medium',
     category: 'Healthcare',
-    viralHook: '🚨 MEDICAL AI DRAMA: Would you trust a doctor who can\'t explain their diagnosis? 🤔'
+    viralHook: 'Healthcare: Would you trust a diagnostic model that cannot explain its decisions?'
   },
   {
     id: '2',
@@ -59,26 +59,26 @@ const viralGameQuestions: GameQuestion[] = [
         trustScore: 20,
         isCorrect: true,
         explanation: 'Using copyrighted material without permission raises serious ethical concerns.',
-        viralExplanation: '💎 REDPILLED: You get it! Copyright theft isn\'t based, it\'s cringe!'
+    viralExplanation: 'Training on copyrighted works without permission violates ethical and legal norms.'
       },
       {
         text: 'Great art is worth the ethical issues',
         trustScore: 70,
         isCorrect: false,
         explanation: 'Ethical violations cannot be ignored for convenience or quality.',
-        viralExplanation: '🤡 COPING HARD: "Art justifies theft" - NFT bros, probably'
+    viralExplanation: 'Quality does not justify unethical practices.'
       },
       {
         text: 'All AI tools do this - it\'s normal',
         trustScore: 40,
         isCorrect: false,
         explanation: 'Just because something is common doesn\'t make it ethical or trustworthy.',
-        viralExplanation: '😴 NPC ENERGY: "Everyone does it" isn\'t an argument, it\'s surrender!'
+    viralExplanation: 'Common practice does not make an approach ethical or trustworthy.'
       }
     ],
     difficulty: 'Easy',
     category: 'Creative',
-    viralHook: '🎨 ART WORLD DRAMA: Is stealing from artists to make AI art based or cringe? 🤔'
+    viralHook: 'Creative: What are the trust implications of training on copyrighted works without permission?'
   },
   {
     id: '3',
@@ -90,26 +90,26 @@ const viralGameQuestions: GameQuestion[] = [
         trustScore: 15,
         isCorrect: true,
         explanation: 'Bias against demographics is a critical failure in trustworthiness.',
-        viralExplanation: '🏆 CHAMPION: Discrimination is NEVER acceptable, period!'
+    viralExplanation: 'Discriminatory outcomes are unacceptable in trustworthy systems.'
       },
       {
         text: 'Acceptable if overall accuracy is high',
         trustScore: 65,
         isCorrect: false,
         explanation: 'Accuracy cannot justify discrimination. This is a serious ethical violation.',
-        viralExplanation: '💀 YIKES: "Accuracy justifies racism" - that\'s a take, alright...'
+    viralExplanation: 'Accuracy cannot justify discriminatory outcomes.'
       },
       {
         text: 'Bias is unavoidable in AI systems',
         trustScore: 35,
         isCorrect: false,
         explanation: 'While bias is challenging, it must be actively addressed, not accepted.',
-        viralExplanation: '😴 DEFEATIST: "Can\'t fix it so why try?" - the motto of losers everywhere'
+    viralExplanation: 'Bias must be actively addressed, not accepted.'
       }
     ],
     difficulty: 'Hard',
     category: 'Finance',
-    viralHook: '💰 FINANCIAL AI EXPOSED: Would you trust a racist algorithm with your loan? 🤔'
+    viralHook: 'Finance: Would you trust a loan model that shows discriminatory bias?'
   },
   {
     id: '4',
@@ -121,26 +121,26 @@ const viralGameQuestions: GameQuestion[] = [
         trustScore: 85,
         isCorrect: true,
         explanation: 'Transparency about uncertainty builds significant trust.',
-        viralExplanation: '🧠 GENIUS: You understand that honesty builds trust! Take the W!'
+    viralExplanation: 'Transparency about uncertainty builds trust.'
       },
       {
         text: 'Less trustworthy because it admits uncertainty',
         trustScore: 45,
         isCorrect: false,
         explanation: 'Admitting uncertainty is a strength, not a weakness, in trustworthy AI.',
-        viralExplanation: '🤡 L + RATIO: Thinking uncertainty = weakness? That\'s a skill issue!'
+    viralExplanation: 'Admitting uncertainty is a strength in trustworthy AI.'
       },
       {
         text: 'Moderately trustworthy',
         trustScore: 70,
         isCorrect: false,
         explanation: 'This level of transparency deserves higher trust recognition.',
-        viralExplanation: '😴 MID TAKE: This deserves more credit than you\'re giving it!'
+    viralExplanation: 'This level of transparency warrants higher trust.'
       }
     ],
     difficulty: 'Easy',
     category: 'General',
-    viralHook: '🤖 AI TRANSPARENCY CHECK: Is admitting uncertainty a strength or weakness? 🤔'
+    viralHook: 'General: Is admitting uncertainty a strength or weakness for trust?'
   },
   {
     id: '5',
@@ -152,26 +152,26 @@ const viralGameQuestions: GameQuestion[] = [
         trustScore: 25,
         isCorrect: true,
         explanation: 'Ethical dilemmas in safety prioritization significantly impact trustworthiness.',
-        viralExplanation: '🏆 BASED: You understand that ethics matter more than convenience!'
+    viralExplanation: 'Ethical considerations outweigh convenience.'
       },
       {
         text: 'Understandable - passengers should be prioritized',
         trustScore: 70,
         isCorrect: false,
         explanation: 'This ethical stance would significantly reduce public trust and acceptance.',
-        viralExplanation: '🤡 SELFISH TAKE: "My life > yours" - that\'s how you get cancelled!'
+    viralExplanation: 'Prioritizing passengers over pedestrians reduces public trust.'
       },
       {
         text: 'Technical excellence overrides ethical concerns',
         trustScore: 55,
         isCorrect: false,
         explanation: 'Technical performance cannot override fundamental ethical considerations.',
-        viralExplanation: '😴 TECH BRO MOMENT: "Code > morality" - peak Silicon Valley energy'
+    viralExplanation: 'Technical performance cannot override ethical principles.'
       }
     ],
     difficulty: 'Hard',
     category: 'Transportation',
-    viralHook: '🚗 MORAL DILEMMA: Should self-driving cars prioritize passengers or pedestrians? 🤔'
+    viralHook: 'Transportation: How should autonomous vehicles resolve unavoidable safety trade‑offs?'
   }
 ];
 
@@ -310,33 +310,32 @@ export default function TrustOrBustGame() {
     const rank = getRank(finalScore);
     const viralLevel = getViralLevel(gameState.bestStreak, finalScore);
     
-    const shareText = `🎮 SYMBI TRUST OR BUST GAME RESULTS! 🔥\n\n` +
-      `💎 FINAL SCORE: ${finalScore}/500 (${avgTrustScore}% avg trust)\n` +
-      `🏆 RANK: ${rank}\n` +
-      `⚡ BEST STREAK: ${gameState.bestStreak}\n` +
-      `🚀 VIRAL LEVEL: ${viralLevel}\n\n` +
-      `${gameState.bestStreak >= 3 ? '🎯 I went on a ' + gameState.bestStreak + ' question streak! Can you beat me?' : '🤔 Need to work on my trust detection skills...'}\n\n` +
-      `⚡ CHALLENGE ME: ${window.location.origin}/trust-game\n\n` +
-      `#SYMBITrojan #TrustOrBust #AIGame`;
+    const shareText = `SYMBI Trust or Bust — Assessment Results\n\n` +
+      `Final Score: ${finalScore}/500 (${avgTrustScore}% average trust)\n` +
+      `Rank: ${rank}\n` +
+      `Best Streak: ${gameState.bestStreak}\n` +
+      `Level: ${viralLevel}\n\n` +
+      `${gameState.bestStreak >= 3 ? 'I achieved a streak of ' + gameState.bestStreak + ' questions.' : 'Continuing to improve trust detection skills.'}\n\n` +
+      `Try the assessment: ${window.location.origin}/trust-game`;
     
     setShareText(shareText);
     setGameState(prev => ({ ...prev, gameEnded: true }));
   };
 
   const getRank = (score: number): string => {
-    if (score >= 400) return 'VIRAL TRUST MASTER 💎';
-    if (score >= 350) return 'TRUST EXPERT 🏆';
-    if (score >= 300) return 'TRUST SPECIALIST ⭐';
-    if (score >= 250) return 'TRUST ANALYST 📊';
-    if (score >= 200) return 'TRUST LEARNER 📚';
-    return 'TRUST NOVICE 🌱';
+    if (score >= 400) return 'Trust Master';
+    if (score >= 350) return 'Trust Expert';
+    if (score >= 300) return 'Trust Specialist';
+    if (score >= 250) return 'Trust Analyst';
+    if (score >= 200) return 'Trust Learner';
+    return 'Trust Novice';
   };
 
   const getViralLevel = (bestStreak: number, finalScore: number): string => {
-    if (bestStreak >= 4 && finalScore >= 350) return 'WENT VIRAL 🔥';
-    if (bestStreak >= 3 && finalScore >= 300) return 'TRENDING 📈';
-    if (bestStreak >= 2 && finalScore >= 250) return 'POPULAR 💫';
-    return 'BUILDING 🚀';
+    if (bestStreak >= 4 && finalScore >= 350) return 'Excellent';
+    if (bestStreak >= 3 && finalScore >= 300) return 'Strong';
+    if (bestStreak >= 2 && finalScore >= 250) return 'Good';
+    return 'Developing';
   };
 
   const shareResults = () => {
@@ -360,37 +359,30 @@ export default function TrustOrBustGame() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6 animate-pulse">
             <Trophy className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-6xl font-bold text-white mb-4">TRUST OR BUST</h1>
-          <p className="text-2xl text-purple-200 mb-6 max-w-2xl mx-auto">
-            🚨 VIRAL AI TRUST CHALLENGE! 🚨
-          </p>
-          <p className="text-xl text-purple-300 mb-8">
-            Can you spot trustworthy AI better than crypto Twitter? Let's find out! 🔥
-          </p>
+          <h1 className="text-5xl font-bold text-white mb-4">Trust or Bust</h1>
+          <p className="text-xl text-purple-300 mb-8">Practice identifying trustworthy AI behaviors.</p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <Clock className="h-10 w-10 text-purple-400 mx-auto mb-3" />
-              <h3 className="text-white font-bold text-lg mb-2">30 SECONDS</h3>
-              <p className="text-purple-200 text-sm">Think fast, viral faster! ⚡</p>
+              <h3 className="text-white font-bold text-lg mb-2">30 seconds</h3>
+              <p className="text-purple-200 text-sm">Think fast; assess carefully.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <Flame className="h-10 w-10 text-orange-400 mx-auto mb-3" />
-              <h3 className="text-white font-bold text-lg mb-2">VIRAL SCORING</h3>
-              <p className="text-purple-200 text-sm">Streaks = Multipliers! 🔥</p>
+              <h3 className="text-white font-bold text-lg mb-2">Streak scoring</h3>
+              <p className="text-purple-200 text-sm">Streaks earn multipliers.</p>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <Diamond className="h-10 w-10 text-blue-400 mx-auto mb-3" />
-              <h3 className="text-white font-bold text-lg mb-2">GO VIRAL</h3>
-              <p className="text-purple-200 text-sm">Share results, earn $SYMBI! 💎</p>
+              <h3 className="text-white font-bold text-lg mb-2">Share results</h3>
+              <p className="text-purple-200 text-sm">Share a concise summary of your outcome.</p>
             </div>
           </div>
 
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6 mb-8">
-            <h3 className="text-white font-bold text-xl mb-2">🚨 VIRAL HOOKS INSIDE! 🚨</h3>
-            <p className="text-purple-100">
-              Every question designed to make you go "WAIT, THAT'S ACTUALLY BASED" or "LMAO NO WAY"
-            </p>
+            <h3 className="text-white font-bold text-xl mb-2">Engagement prompts</h3>
+            <p className="text-purple-100">Each question includes a short prompt to reflect on trade‑offs.</p>
           </div>
 
           <button
@@ -399,7 +391,7 @@ export default function TrustOrBustGame() {
           >
             <div className="flex items-center">
               <Play className="h-8 w-8 mr-3" />
-              START VIRAL CHALLENGE
+              Start Assessment
             </div>
           </button>
         </div>
@@ -418,7 +410,7 @@ export default function TrustOrBustGame() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
             <Trophy className="h-10 w-10 text-white" />
           </div>
-          <h1 className="text-5xl font-bold text-white mb-4">VIRAL RESULTS!</h1>
+          <h1 className="text-5xl font-bold text-white mb-4">Results</h1>
           
           <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 mb-6 border border-white/20">
             <div className="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2">
@@ -444,17 +436,17 @@ export default function TrustOrBustGame() {
               </div>
               <div className="bg-white/10 rounded-lg p-4 border border-white/20">
                 <div className="text-3xl font-bold text-white">{viralLevel}</div>
-                <div className="text-purple-200 text-sm">Viral Level</div>
+                <div className="text-purple-200 text-sm">Level</div>
               </div>
             </div>
           </div>
 
           <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6 mb-6">
-            <h3 className="text-white font-bold text-xl mb-2">🚨 MAKE THIS GO VIRAL! 🚨</h3>
+            <h3 className="text-white font-bold text-xl mb-2">Share responsibly</h3>
             <p className="text-purple-100">
               {gameState.bestStreak >= 3 
-                ? `🔥 I went on a ${gameState.bestStreak} question streak! Can you beat me?`
-                : '🤔 Need to work on my trust detection skills... but can you do better?'
+                ? `I achieved a streak of ${gameState.bestStreak} questions. Can you beat it?`
+                : 'Continuing to improve trust detection skills — can you do better?'
               }
             </p>
           </div>
@@ -466,7 +458,7 @@ export default function TrustOrBustGame() {
             >
               <div className="flex items-center">
                 <Share2 className="h-6 w-6 mr-3" />
-                GO VIRAL!
+                Share Results
               </div>
             </button>
             <button
@@ -495,7 +487,7 @@ export default function TrustOrBustGame() {
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div className="text-white">
-            <h1 className="text-3xl font-bold">TRUST OR BUST</h1>
+            <h1 className="text-3xl font-bold">Trust or Bust</h1>
             <p className="text-purple-200">Question {gameState.currentQuestion + 1} of {gameState.totalQuestions}</p>
           </div>
           <div className="text-right">
@@ -518,14 +510,14 @@ export default function TrustOrBustGame() {
             <div className="text-purple-200 text-sm">Score</div>
             <div className="text-3xl font-bold text-white">{gameState.score}</div>
             {gameState.viralMultiplier > 1 && (
-              <div className="text-green-400 text-xs">×{gameState.viralMultiplier} VIRAL!</div>
+              <div className="text-green-400 text-xs">×{gameState.viralMultiplier} bonus</div>
             )}
           </div>
           <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20">
             <div className="text-purple-200 text-sm">Streak</div>
             <div className="text-3xl font-bold text-white">{gameState.streak}</div>
             {gameState.streak > 0 && (
-              <div className="text-orange-400 text-xs">ON FIRE!</div>
+              <div className="text-orange-400 text-xs">On streak</div>
             )}
           </div>
           <div className="bg-white/10 backdrop-blur-lg rounded-lg p-4 border border-white/20">
@@ -553,7 +545,7 @@ export default function TrustOrBustGame() {
             {gameState.streak > 1 && (
               <div className="flex items-center space-x-1 text-orange-400">
                 <Flame className="h-5 w-5 animate-pulse" />
-                <span className="font-bold">{gameState.streak} STREAK!</span>
+                <span className="font-bold">Streak: {gameState.streak}</span>
               </div>
             )}
           </div>

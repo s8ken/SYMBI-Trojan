@@ -233,24 +233,17 @@ export default function TrustScanner() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
-      {/* Viral Header */}
+      {/* Header */}
       <div className="max-w-4xl mx-auto mb-8">
         <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4 animate-pulse">
-            <Search className="h-8 w-8 text-white" />
-          </div>
-          <h1 className="text-4xl font-bold text-white mb-2">🔍 TRUST SCANNER</h1>
-          <p className="text-xl text-purple-300 mb-2">Upload any AI tool and get VIRAL trust scores!</p>
-          <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-3">
-            <p className="text-white font-bold text-lg">🚨 MAKE THIS GO VIRAL! 🚨</p>
-            <p className="text-purple-100">Share your results and earn $SYMBI tokens!</p>
-          </div>
+          <h1 className="text-4xl font-bold text-white mb-2">Trust Scanner</h1>
+          <p className="text-lg text-purple-300 mb-2">Assess and share trust signals for AI and crypto tools.</p>
         </div>
       </div>
 
-      {/* Quick Viral Targets */}
+      {/* Quick Targets */}
       <div className="max-w-4xl mx-auto mb-8">
-        <h3 className="text-white text-lg font-semibold mb-4 text-center">🔥 VIRAL TARGETS - CLICK TO SCAN!</h3>
+        <h3 className="text-white text-lg font-semibold mb-4 text-center">Quick Targets — click to scan</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {viralTargets.map((target) => (
             <button
@@ -315,7 +308,7 @@ export default function TrustScanner() {
             <h3 className="text-2xl font-bold text-white mb-2">OVERALL TRUST SCORE</h3>
             <p className="text-purple-300 mb-4">{scanResult.viralQuote}</p>
             
-            {/* Share Mode Selector */}
+            {/* Share Mode */}
             <div className="flex justify-center space-x-2 mb-4">
               <button
                 onClick={() => setShareMode('badge')}
@@ -349,14 +342,14 @@ export default function TrustScanner() {
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-600 font-bold flex items-center space-x-2"
               >
                 <Share2 className="h-5 w-5" />
-                <span>GO VIRAL!</span>
+                <span>Share Results</span>
               </button>
               <button
                 onClick={() => copyToClipboard(scanResult.shareableBadge)}
                 className="bg-black/20 text-white border border-purple-500/20 px-6 py-3 rounded-lg hover:bg-white/20 font-bold flex items-center space-x-2 border border-white/20"
               >
                 <Trophy className="h-5 w-5" />
-                <span>{copiedBadge ? 'COPIED!' : 'COPY BADGE'}</span>
+                <span>{copiedBadge ? 'Copied' : 'Copy Badge'}</span>
               </button>
             </div>
           </div>
@@ -428,30 +421,18 @@ export default function TrustScanner() {
             </div>
           </div>
 
-          {/* Meme Quote */}
+          {/* Notes */}
           {shareMode === 'meme' && (
-            <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-6 text-center">
-              <h3 className="text-white font-bold text-lg mb-2">🔥 MEME QUOTE</h3>
+            <div className="bg-black/20 rounded-lg p-6 text-center border border-white/10">
+              <h3 className="text-white font-bold text-lg mb-2">Notes</h3>
               <p className="text-white text-lg">{scanResult.memeQuote}</p>
             </div>
           )}
         </div>
       )}
 
-      {/* Footer */}
       <div className="max-w-4xl mx-auto mt-12 text-center">
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg p-6 mb-6">
-          <p className="text-white font-bold text-xl mb-2">🔥 MAKE THIS GO VIRAL! 🔥</p>
-          <p className="text-purple-100 mb-2">Share your trust scans and earn $SYMBI tokens!</p>
-          <div className="flex justify-center items-center space-x-2">
-            <Rocket className="h-5 w-5 text-white" />
-            <span className="text-white font-bold">SYMBI Trojan - Trust Infrastructure by Stealth</span>
-            <Rocket className="h-5 w-5 text-white" />
-          </div>
-        </div>
-        <p className="text-purple-300 text-sm">
-          🎯 Scan. Share. Go Viral. Earn $SYMBI. 🎯
-        </p>
+        <p className="text-purple-300 text-sm">Share responsibly. Provide context and links to verification.</p>
       </div>
     </div>
   );
