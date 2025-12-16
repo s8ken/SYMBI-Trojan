@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Zap, Shield, Heart } from 'lucide-react'
 import FunSpace from './components/trojan/FunSpace'
 import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
 import DemoEmbed from './components/trojan/DemoEmbed'
 import './App.css'
+import Whitepaper from './components/trojan/Whitepaper'
 import { BUILD_SHA, BUILD_TIME } from './build-info'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about' | 'demo'>('home')
+  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about' | 'demo' | 'whitepaper'>('home')
+
+  useEffect(() => {
+    const path = window.location.pathname
+    if (path.startsWith('/whitepaper')) {
+      setActiveTab('whitepaper')
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -65,6 +73,12 @@ export default function App() {
               <span className="font-medium">Research</span>
             </a>
             <a
+              href="/whitepaper"
+              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            >
+              <span className="font-medium">Whitepaper</span>
+            </a>
+            <a
               href="https://symbi.world"
               target="_blank"
               rel="noreferrer"
@@ -117,7 +131,7 @@ export default function App() {
       </div>
 
       <main className="flex-1">
-        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : activeTab === 'demo' ? <DemoEmbed /> : <AboutUs />}
+        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : activeTab === 'demo' ? <DemoEmbed /> : activeTab === 'whitepaper' ? <Whitepaper /> : <AboutUs />}
       </main>
 
       <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">

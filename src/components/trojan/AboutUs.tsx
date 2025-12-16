@@ -29,7 +29,7 @@ export default function AboutUs() {
               <a href="#framework" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">
                 Explore the Framework
               </a>
-              <a href="#whitepaper" className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-200 hover:border-cyan-400/70 hover:text-cyan-200">
+              <a href="/whitepaper" className="inline-flex items-center gap-2 rounded-full border border-slate-600 bg-slate-900/60 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-slate-200 hover:border-cyan-400/70 hover:text-cyan-200">
                 View Tech Whitepaper
               </a>
             </div>
@@ -292,7 +292,7 @@ export default function AboutUs() {
                 <li>• Maps features to regulatory and enterprise risk frameworks</li>
               </ul>
               <div className="mt-5 flex flex-wrap gap-3 text-xs">
-                <a href="/docs/symbi-whitepaper.pdf" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">Download PDF</a>
+                <a href="/whitepaper" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">Read Online</a>
                 <a href="https://github.com/s8ken" target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">View on GitHub</a>
               </div>
             </div>
