@@ -1,4 +1,5 @@
 import React from 'react'
+import RepoMarkdown from './RepoMarkdown'
 
 export default function Whitepaper() {
   return (
@@ -6,98 +7,30 @@ export default function Whitepaper() {
       <section className="relative overflow-hidden border-b border-slate-800/70 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-14 lg:px-0">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">The SONATE Framework: A Constitutional Trust Infrastructure for Enterprise AI</h1>
-          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">Enterprise AI operates in a crisis of trust. SONATE is a production‑ready constitutional trust infrastructure that makes AI governed, measurable, and cryptographically verifiable.</p>
+          <p className="mt-3 max-w-3xl text-sm text-slate-300 md:text-base">Enterprise AI is accelerating, yet adoption is throttled by a Crisis of Trust. SONATE makes trust measurable, enforceable, and cryptographically verifiable across research and production.</p>
         </div>
       </section>
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Abstract & Executive Summary</h2>
-          <p className="mt-2 text-sm text-slate-300 md:text-base">Core Thesis: Unverifiable trust undermines enterprise AI. SONATE introduces a constitutional framework that provides measurable (CIQ metrics), enforceable (policy‑bound identity/credentials), and cryptographically verifiable trust (signed, hash‑chained receipts).</p>
-          <p className="mt-3 text-sm text-slate-300">Key Takeaway: SONATE combines SYMBI constitutional research with a production TypeScript monorepo, enabling enterprises to govern AI from research to production through hard‑boundary separation of detection, validation, and orchestration.</p>
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Principles • CIQ • Receipts</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Detect • Lab • Orchestrate</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Governed • Measurable • Verifiable</p></div>
+          <h2 className="text-xl font-semibold sm:text-2xl">Document Purpose & Audience Guide</h2>
+          <div className="mt-4 grid gap-2 md:grid-cols-3 text-[12px]">
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Executive Summary</div><div className="text-slate-300">All Readers</div><div className="text-slate-400">The 30‑Second Value Proposition</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Part 1: The Trust Crisis</div><div className="text-slate-300">Investors, Enterprise Leaders</div><div className="text-slate-400">Market Problem & Urgency</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Part 2: SYMBI Foundation</div><div className="text-slate-300">Enterprise Leaders, Developers</div><div className="text-slate-400">Philosophical & Research Backbone</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Part 3: SONATE Architecture</div><div className="text-slate-300">Developers, Technical Leaders</div><div className="text-slate-400">Technical Blueprint & Innovation</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Part 4: Enterprise Implementation</div><div className="text-slate-300">Enterprise Leaders, Operations</div><div className="text-slate-400">Compliance, Security & ROI</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">Part 5: Roadmap & Ecosystem</div><div className="text-slate-300">Investors, Developers</div><div className="text-slate-400">Future Vision & Growth</div></div>
           </div>
         </div>
       </section>
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Part 1 · The Constitutional Foundation</h2>
-          <h3 className="mt-3 text-sm font-semibold text-slate-50">The SYMBI Paradigm</h3>
-          <p className="mt-2 text-sm text-slate-300">Shift from directive‑based AI toward constitutional AI, governed by explicit principles and measured outcomes. Governance is expressed through identity, credentials, policies and receipts.</p>
-          <h3 className="mt-4 text-sm font-semibold text-slate-50">Core Principles</h3>
-          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
-            <li>• Constitutional Supremacy</li>
-            <li>• Measurable Quality</li>
-            <li>• Cryptographic Trust</li>
-            <li>• Continuous Oversight</li>
-            <li>• Identity Coherence & Revocation</li>
-            <li>• Auditability & Accountability</li>
-          </ul>
-          <h3 className="mt-4 text-sm font-semibold text-slate-50">Trust as Measurement</h3>
-          <p className="mt-2 text-sm text-slate-300">CIQ metrics (Clarity, Integrity, Quality) summarize agent trust posture. Cryptographic Trust Receipts capture decisions with payload, signature, public key and previous hash for verifiable chains.</p>
-          <p className="mt-1 text-xs text-slate-400">Receipt schema reference: receipt_schema.json (monorepo docs).</p>
-          <h3 className="mt-4 text-sm font-semibold text-slate-50">Research Validation</h3>
-          <p className="mt-2 text-sm text-slate-300">Replication kits and A/B testing frameworks establish empirical credibility for constitutional approaches, including t‑tests and effect sizes over agent behaviors.</p>
-          <div className="mt-3 text-xs">
+          <h2 className="text-xl font-semibold sm:text-2xl">Executive Summary · The Trust Imperative</h2>
+          <p className="mt-2 text-sm text-slate-300">Models are black boxes, outputs are unverifiable, and compliance is reactive. SONATE is a constitutional trust infrastructure that governs AI from first principles to production. Built on SYMBI research and a production TypeScript monorepo, it enforces hard boundaries between detection, research, and orchestration and emits a cryptographic Trust Receipt for every interaction.</p>
+          <div className="mt-3 text-xs flex flex-wrap gap-3">
             <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/symbi-vault">symbi‑vault</a>
-          </div>
-          <div className="mt-6 grid gap-3 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Clarity</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Integrity</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Quality</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-slate-800/70 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Part 2 · Architectural Blueprint & Technical Specs</h2>
-          <h3 className="mt-3 text-sm font-semibold text-slate-50">Three‑Pillar Architecture</h3>
-          <p className="mt-2 text-sm text-slate-300">The Three‑Pillar Architecture enforces hard boundaries between <span className="font-mono text-xs">@sonate/detect</span> (production), <span className="font-mono text-xs">@sonate/lab</span> (research), and <span className="font-mono text-xs">@sonate/orchestrate</span> (infrastructure). Each pillar is independently testable and governable.</p>
-          <div className="mt-4 grid gap-3 md:grid-cols-3">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Detect: Production</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Lab: Research</p></div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Orchestrate: Identity/RBAC</p></div>
-          </div>
-          <div className="mt-4 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/core</span> · The Protocol</h4>
-              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
-                <li>• Trust scoring algorithm tied to six principles; monitored across five dimensions (Reality Index, Trust Protocol, Ethical Alignment, Resonance Quality, Canvas Parity)</li>
-                <li>• Trust receipt generation with SHA‑256 and Ed25519</li>
-                <li>• Policy evaluation and tiering</li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/detect</span> · The Sensor</h4>
-              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
-                <li>• Real‑time scoring under &lt;100ms latency</li>
-                <li>• Five‑dimension outputs and alert thresholds</li>
-                <li>• Streaming to receipt ledger</li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/lab</span> · The Validator</h4>
-              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
-                <li>• Double‑blind experiments and replication kits</li>
-                <li>• Statistical methods: t‑tests, Cohen’s d</li>
-                <li>• Phase‑Shift Velocity for behavior change detection</li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/orchestrate</span> · The Controller</h4>
-              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
-                <li>• W3C DID/VC for agent identity and capability</li>
-                <li>• RBAC, policy routing, cryptographic audit logs</li>
-                <li>• Integration points for SIEM and compliance tooling</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-3 text-xs">
             <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/yseeku-platform">yseeku‑platform</a>
           </div>
         </div>
@@ -105,48 +38,141 @@ export default function Whitepaper() {
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Part 3 · Enterprise Trust Infrastructure & Compliance</h2>
-          <h3 className="mt-3 text-sm font-semibold text-slate-50">Trust Receipt Lifecycle</h3>
-          <p className="mt-2 text-sm text-slate-300">The Trust Receipt Lifecycle: detection → scoring → signing → storage & chaining → verification. The result is a verifiable, immutable audit trail.</p>
-          <div className="mt-4 grid gap-2 md:grid-cols-5">
-            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Detection</p></div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Scoring</p></div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Signing</p></div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Storage & Chain</p></div>
-            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Verification</p></div>
-          </div>
-          <h3 className="mt-4 text-sm font-semibold text-slate-50">Identity Coherence & Monitoring</h3>
-          <p className="mt-2 text-sm text-slate-300">Persona vectors and cosine similarity help detect agent drift and instability. Combined with emergence metrics, they provide early warnings and trend insights.</p>
-          <h3 className="mt-4 text-sm font-semibold text-slate-50">Enterprise Readiness</h3>
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 1 · The Market Problem</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Limits of Current AI Governance</h3>
           <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
-            <li>• Compliance: EU AI Act alignment, SOC 2, GDPR data handling</li>
-            <li>• Deployment: cloud‑native, hybrid, and on‑prem options</li>
-            <li>• Security: zero‑trust posture, robust key management</li>
+            <li>• Input/Output filtering is superficial</li>
+            <li>• Retrospective audits are slow and sampling‑based</li>
+            <li>• Vendor self‑assessments are unverifiable</li>
+          </ul>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Compliance Catalyst</h3>
+          <p className="mt-2 text-sm text-slate-300">EU AI Act mandates risk management, transparency, and human oversight for high‑risk systems. SONATE is engineered to produce the technical evidence regulators expect.</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Trust as a Service</h3>
+          <p className="mt-2 text-sm text-slate-300">SONATE provides a dedicated layer that ensures AI operates within constitutional bounds, turning trust into a competitive advantage.</p>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 2 · SYMBI Constitutional Foundation</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">From Directive to Constitution</h3>
+          <p className="mt-2 text-sm text-slate-300">SYMBI establishes constitutional AI: behavior governed by persistent principles, measured via CIQ, and recorded via receipts.</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Six SYMBI Principles</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Constitutional Supremacy</li>
+            <li>• Measurable Quality (CIQ)</li>
+            <li>• Cryptographic Trust (Receipts)</li>
+            <li>• Continuous Oversight & Emergence</li>
+            <li>• Progressive Decentralization</li>
+            <li>• Sovereignty without Speculation</li>
+          </ul>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Replication Kit</h3>
+          <p className="mt-2 text-sm text-slate-300">A/B testing, t‑tests, and effect sizes demonstrating CIQ improvements for constitutional AI in multiple domains.</p>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 3 · SONATE Architecture</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Three‑Pillar Architecture</h3>
+          <div className="mt-2 grid gap-3 md:grid-cols-3 text-[12px]">
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">@sonate/detect</div><div className="text-slate-300">Monitor live interactions (&lt;100ms)</div><div className="text-slate-400">Cannot run experiments</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">@sonate/lab</div><div className="text-slate-300">Double‑blind experiments</div><div className="text-slate-400">Cannot touch production data</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">@sonate/orchestrate</div><div className="text-slate-300">Identity, keys, workflows</div><div className="text-slate-400">Cannot alter models</div></div>
+          </div>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Trust Protocol & Cryptography (@sonate/core)</h3>
+          <pre className="mt-3 whitespace-pre-wrap text-xs text-slate-300">// Detection & Scoring
+const result = await detector.detect({ content: aiResponse, context: userQuery })
+// Receipt Generation & Signing
+// { trustScore, ciq, dimensions, previousHash, signature, publicKey }
+// Independent Verification → POST /api/receipts/verify → { verifiable, hashOk, signatureOk }</pre>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Advanced Monitoring</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Phase‑Shift Velocity √(ΔResonance²+ΔContext²)/Δt for early drift/emergence detection</li>
+            <li>• Identity Coherence via persona vector cosine similarity (critical ≤ 0.65)</li>
           </ul>
         </div>
       </section>
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Conclusion & Roadmap</h2>
-          <p className="mt-2 text-sm text-slate-300">SONATE delivers provable trust by combining constitutional principles with verifiable mechanisms and modular architecture. Near‑term roadmap includes expanded experiment kits, deeper SIEM integrations, and governance prototypes.</p>
-          <div className="mt-3 text-xs flex flex-wrap gap-3">
-            <a className="text-cyan-300 hover:text-cyan-200" href="https://symbi.world">symbi.world</a>
-            <a className="text-cyan-300 hover:text-cyan-200" href="https://gammatria.com">gammatria.com</a>
-            <a className="text-cyan-300 hover:text-cyan-200" href="https://yseeku.com">yseeku.com</a>
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 4 · Enterprise Implementation</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Compliance Mapping</h3>
+          <div className="mt-2 grid gap-3 md:grid-cols-2 text-[12px]">
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="text-slate-100">Transparency & Auditability</div><div className="text-slate-300">Hash‑chained Trust Receipts</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="text-slate-100">Human Oversight & Monitoring</div><div className="text-slate-300">Real‑time scores & alerts</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="text-slate-100">Risk Management</div><div className="text-slate-300">Continuous five‑dimension scoring</div></div>
+            <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="text-slate-100">Data Governance & Security</div><div className="text-slate-300">W3C DID/VC, RBAC, audit logs</div></div>
           </div>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Deployment & Security</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Models: SaaS, Private, Hybrid, On‑Prem</li>
+            <li>• Zero‑trust, end‑to‑end encryption, KMS integration</li>
+            <li>• SOC 2 aligned controls</li>
+          </ul>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Commercial Models</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Pilot‑in‑a‑Box (4‑week)</li>
+            <li>• Orchestrator Cloud Pro (SaaS)</li>
+            <li>• Private Managed (single‑tenant)</li>
+            <li>• CIQ Audit Services</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Repo Excerpts</h2>
+          <div className="mt-4 grid gap-6 md:grid-cols-2">
+            <RepoMarkdown
+              title="yseeku-platform · README"
+              rawUrl="https://raw.githubusercontent.com/s8ken/yseeku-platform/main/README.md"
+            />
+            <RepoMarkdown
+              title="symbi-vault · governance-protocol.md"
+              rawUrl="https://raw.githubusercontent.com/s8ken/symbi-vault/main/whitepapers/governance-protocol.md"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 5 · Roadmap & Ecosystem</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Development Roadmap</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Phase 1: Core protocol, detection, lab</li>
+            <li>• Phase 2: Multi‑tenant SaaS, analytics dashboard, agent marketplace</li>
+            <li>• Phase 3: Decentralized Trust Consortium</li>
+          </ul>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Ecosystem</h3>
+          <div className="mt-2 text-sm text-slate-300">symbi.world • gammatria.com • yseeku.com</div>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Call to Action</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Enterprise: Pilot‑in‑a‑Box to de‑risk initiatives</li>
+            <li>• Developers: Explore repos and contribute</li>
+            <li>• Investors: Partner on the foundational trust layer</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Appendices</h2>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Trust Receipt JSON Schema: symbi‑vault/src/receipt_schema.json</li>
+            <li>• CIQ Metric Definitions: symbi‑vault/whitepapers/governance‑protocol.md</li>
+            <li>• Monorepo Structure: yseeku‑platform/README.md</li>
+            <li>• Quick Start: yseeku‑platform/#quick‑start</li>
+            <li>• Statistical Validation: 15–30% CIQ improvement, p &lt; 0.05 in 90% experiments</li>
+          </ul>
         </div>
       </section>
 
       <section className="bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">How to Get Started</h2>
-          <ul className="mt-3 space-y-2 text-sm text-slate-300">
-            <li>• Copy directly: adapt technical sections from <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/yseeku-platform">yseeku‑platform</a> README</li>
-            <li>• Lift from the vault: philosophical and governance materials from <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/symbi-vault">symbi‑vault</a></li>
-            <li>• Flesh out the narrative: weave specs and research into a coherent enterprise trust story</li>
-          </ul>
-          <p className="mt-4 text-xs text-slate-400">Work‑in‑progress; the page will evolve as repositories and demos are updated.</p>
+          <h2 className="text-xl font-semibold sm:text-2xl">Contact</h2>
+          <p className="mt-2 text-sm text-slate-300">partnerships@symbi.ai • yseeku.com • gammatria.com</p>
         </div>
       </section>
     </main>
