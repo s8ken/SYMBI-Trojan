@@ -13,6 +13,7 @@
   "routes": [
     { "src": "/demo", "dest": "/demo101.html" },
     { "src": "/demo.html", "dest": "/demo101.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
