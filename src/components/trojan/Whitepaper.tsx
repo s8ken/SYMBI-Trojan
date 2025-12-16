@@ -15,7 +15,11 @@ export default function Whitepaper() {
           <h2 className="text-xl font-semibold sm:text-2xl">Abstract & Executive Summary</h2>
           <p className="mt-2 text-sm text-slate-300 md:text-base">Core Thesis: Unverifiable trust undermines enterprise AI. SONATE introduces a constitutional framework that provides measurable (CIQ metrics), enforceable (policy‑bound identity/credentials), and cryptographically verifiable trust (signed, hash‑chained receipts).</p>
           <p className="mt-3 text-sm text-slate-300">Key Takeaway: SONATE combines SYMBI constitutional research with a production TypeScript monorepo, enabling enterprises to govern AI from research to production through hard‑boundary separation of detection, validation, and orchestration.</p>
-          <img className="mt-6 w-full rounded-2xl border border-slate-800" alt="SONATE overview" src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Professional%20dark-theme%20overview%20diagram%20for%20SONATE%20Framework%20showing%20Constitutional%20Principles%2C%20CIQ%20metrics%2C%20Trust%20Receipts%2C%20and%20three%20pillars%20%28detect%2C%20lab%2C%20orchestrate%29.%20Clear%20labels%2C%20enterprise%20style.&image_size=landscape_16_9" />
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Principles • CIQ • Receipts</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Detect • Lab • Orchestrate</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Governed • Measurable • Verifiable</p></div>
+          </div>
         </div>
       </section>
 
@@ -41,7 +45,11 @@ export default function Whitepaper() {
           <div className="mt-3 text-xs">
             <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/symbi-vault">symbi‑vault</a>
           </div>
-          <img className="mt-6 w-full rounded-2xl border border-slate-800" alt="CIQ metrics and receipts" src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Infographic%20showing%20CIQ%20%28Clarity%2C%20Integrity%2C%20Quality%29%20metrics%20and%20cryptographic%20trust%20receipts%20%28SHA-256%20hash%2C%20Ed25519%20signature%2C%20previous%20hash%29%2C%20dark%20enterprise%20style.&image_size=landscape_16_9" />
+          <div className="mt-6 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Clarity</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Integrity</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">CIQ: Quality</p></div>
+          </div>
         </div>
       </section>
 
@@ -50,7 +58,11 @@ export default function Whitepaper() {
           <h2 className="text-xl font-semibold sm:text-2xl">Part 2 · Architectural Blueprint & Technical Specs</h2>
           <h3 className="mt-3 text-sm font-semibold text-slate-50">Three‑Pillar Architecture</h3>
           <p className="mt-2 text-sm text-slate-300">The Three‑Pillar Architecture enforces hard boundaries between <span className="font-mono text-xs">@sonate/detect</span> (production), <span className="font-mono text-xs">@sonate/lab</span> (research), and <span className="font-mono text-xs">@sonate/orchestrate</span> (infrastructure). Each pillar is independently testable and governable.</p>
-          <img className="mt-4 w-full rounded-2xl border border-slate-800" alt="Three pillars diagram" src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Three%20pillar%20architecture%20diagram%20Detect%2C%20Lab%2C%20Orchestrate%20with%20hard%20boundaries%2C%20professional%20dark%20theme%2C%20clear%20labels.&image_size=landscape_16_9" />
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Detect: Production</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Lab: Research</p></div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4"><p className="text-xs text-slate-300">Orchestrate: Identity/RBAC</p></div>
+          </div>
           <div className="mt-4 grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
               <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/core</span> · The Protocol</h4>
@@ -96,7 +108,13 @@ export default function Whitepaper() {
           <h2 className="text-xl font-semibold sm:text-2xl">Part 3 · Enterprise Trust Infrastructure & Compliance</h2>
           <h3 className="mt-3 text-sm font-semibold text-slate-50">Trust Receipt Lifecycle</h3>
           <p className="mt-2 text-sm text-slate-300">The Trust Receipt Lifecycle: detection → scoring → signing → storage & chaining → verification. The result is a verifiable, immutable audit trail.</p>
-          <img className="mt-4 w-full rounded-2xl border border-slate-800" alt="Receipt lifecycle" src="https://trae-api-sg.mchost.guru/api/ide/v1/text_to_image?prompt=Trust%20receipt%20lifecycle%20diagram%20generation%2C%20signing%2C%20storage%20and%20hash%20chaining%2C%20verification%2C%20dark%20enterprise%20style.&image_size=landscape_16_9" />
+          <div className="mt-4 grid gap-2 md:grid-cols-5">
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Detection</p></div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Scoring</p></div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Signing</p></div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Storage & Chain</p></div>
+            <div className="rounded-xl border border-slate-800 bg-slate-900/70 p-3"><p className="text-[11px] text-slate-300">Verification</p></div>
+          </div>
           <h3 className="mt-4 text-sm font-semibold text-slate-50">Identity Coherence & Monitoring</h3>
           <p className="mt-2 text-sm text-slate-300">Persona vectors and cosine similarity help detect agent drift and instability. Combined with emergence metrics, they provide early warnings and trend insights.</p>
           <h3 className="mt-4 text-sm font-semibold text-slate-50">Enterprise Readiness</h3>
