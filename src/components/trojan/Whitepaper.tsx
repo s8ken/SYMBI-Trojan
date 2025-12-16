@@ -81,11 +81,11 @@ export default function Whitepaper() {
             <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-3"><div className="font-semibold text-slate-100">@sonate/orchestrate</div><div className="text-slate-300">Identity, keys, workflows</div><div className="text-slate-400">Cannot alter models</div></div>
           </div>
           <h3 className="mt-4 text-sm font-semibold text-slate-50">Trust Protocol & Cryptography (@sonate/core)</h3>
-          <pre className="mt-3 whitespace-pre-wrap text-xs text-slate-300">// Detection & Scoring
+          <pre className="mt-3 whitespace-pre-wrap text-xs text-slate-300">{`// Detection & Scoring
 const result = await detector.detect({ content: aiResponse, context: userQuery })
 // Receipt Generation & Signing
 // { trustScore, ciq, dimensions, previousHash, signature, publicKey }
-// Independent Verification → POST /api/receipts/verify → { verifiable, hashOk, signatureOk }</pre>
+// Independent Verification → POST /api/receipts/verify → { verifiable, hashOk, signatureOk }`}</pre>
           <h3 className="mt-4 text-sm font-semibold text-slate-50">Advanced Monitoring</h3>
           <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
             <li>• Phase‑Shift Velocity √(ΔResonance²+ΔContext²)/Δt for early drift/emergence detection</li>
