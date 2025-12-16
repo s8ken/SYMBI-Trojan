@@ -5,93 +5,128 @@ export default function Whitepaper() {
     <main className="pb-24 bg-slate-950 text-slate-50">
       <section className="relative overflow-hidden border-b border-slate-800/70 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
         <div className="mx-auto max-w-6xl px-4 py-14 lg:px-0">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">SYMBI Technical Whitepaper</h1>
-          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">
-            A working architecture for AI trust: decentralized identity, verifiable trust contracts, signed receipts, and emergence monitoring for autonomous agents.
-          </p>
+          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">The SONATE Framework: A Constitutional Trust Infrastructure for Enterprise AI</h1>
+          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">A constitutional approach to governing enterprise AI with measurable, enforceable, and cryptographically verifiable trust — combining SYMBI research with a production TypeScript monorepo.</p>
         </div>
       </section>
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Overview</h2>
-          <p className="mt-2 text-sm text-slate-300 md:text-base">
-            SYMBI is a trust spine for agent ecosystems. It binds identity (DIDs), capabilities (W3C Verifiable Credentials), and ethical constraints into verifiable contracts and records signed receipts for every operation. A companion emergence monitor observes drift and phase‑shift in agent behavior over time.
-          </p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-300">
-            <li>• Decentralized Identity (DID Core) for agents and organizations</li>
-            <li>• Verifiable Credentials for capabilities and trust declarations</li>
-            <li>• Hash‑chained, signed receipts for provenance and auditability</li>
-            <li>• StatusList2021 for revocation and suspension semantics</li>
-            <li>• Emergence analytics (drift, resonance, alert tiers)</li>
+          <h2 className="text-xl font-semibold sm:text-2xl">Abstract & Executive Summary</h2>
+          <p className="mt-2 text-sm text-slate-300 md:text-base">Enterprise AI today lacks verifiable trust. SONATE provides a constitutional framework that makes trust measurable (CIQ metrics), enforceable (policies bound to identity and credentials), and verifiable (signed, hash‑chained receipts). It unifies SYMBI’s constitutional research with a production TypeScript platform so organizations can govern AI from research to production.</p>
+          <p className="mt-3 text-sm text-slate-300">Key takeaway: SONATE couples SYMBI’s principles and validation methods with a modular monorepo that separates sensing, experimentation, and orchestration, enabling provable, auditable behavior across the lifecycle.</p>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 1 · The Constitutional Foundation</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">The SYMBI Paradigm</h3>
+          <p className="mt-2 text-sm text-slate-300">Shift from directive‑based AI toward constitutional AI, governed by explicit principles and measured outcomes. Governance is expressed through identity, credentials, policies and receipts.</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Core Principles</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Constitutional supremacy over ad‑hoc directives</li>
+            <li>• Measurable quality and transparent provenance</li>
+            <li>• Ethical alignment and operational integrity</li>
+            <li>• Continuous oversight and emergence awareness</li>
+            <li>• Identity coherence and revocation semantics</li>
+            <li>• Auditability and accountability by design</li>
           </ul>
-        </div>
-      </section>
-
-      <section className="border-b border-slate-800/70 bg-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="text-sm font-semibold text-slate-50">Identity Layer · DID Core</h3>
-              <p className="mt-2 text-sm text-slate-300">Agents use W3C DIDs (e.g., did:web, did:key, did:ion, did:ethr). Keys can be verified, rotated, and revoked. Actions are bound to identities for accountability.</p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-400">
-                <li>• DID Documents and verification methods</li>
-                <li>• Key lifecycle: issuance, rotation, revocation</li>
-                <li>• On‑chain and off‑chain identifiers supported</li>
-              </ul>
-            </div>
-            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-              <h3 className="text-sm font-semibold text-slate-50">Trust Layer · Symphony</h3>
-              <p className="mt-2 text-sm text-slate-300">Trust declarations across ethical pillars are expressed as Verifiable Credentials and enforced by policy. Every operation emits a signed, hash‑chained receipt.</p>
-              <ul className="mt-3 space-y-1.5 text-xs text-slate-400">
-                <li>• VC issuance, verification, and presentation flows</li>
-                <li>• StatusList2021 for revocation/suspension</li>
-                <li>• Ed25519 signatures; SHA‑256 hash chains</li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
-            <h3 className="text-sm font-semibold text-slate-50">Emergence Layer · Resonate</h3>
-            <p className="mt-2 text-sm text-slate-300">Resonate watches trajectories, not single answers. It tracks drift and phase‑shift velocity, resonance changes, and narrative emergence from agent notes.</p>
-            <ul className="mt-3 space-y-1.5 text-xs text-slate-400">
-              <li>• Sliding‑window metrics and EWMA for drift</li>
-              <li>• Alert tiers: normal · high · critical</li>
-              <li>• APIs for dashboards, SIEMs, and audits</li>
-            </ul>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Trust as Measurement</h3>
+          <p className="mt-2 text-sm text-slate-300">CIQ metrics (Clarity, Integrity, Quality) summarize agent trust posture. Cryptographic Trust Receipts capture decisions with payload, signature, public key and previous hash for verifiable chains.</p>
+          <p className="mt-1 text-xs text-slate-400">Receipt schema reference: receipt_schema.json (monorepo docs).</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Research Validation</h3>
+          <p className="mt-2 text-sm text-slate-300">Replication kits and A/B testing frameworks establish empirical credibility for constitutional approaches, including t‑tests and effect sizes over agent behaviors.</p>
+          <div className="mt-3 text-xs">
+            <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/symbi-vault">symbi‑vault</a>
           </div>
         </div>
       </section>
 
       <section className="border-b border-slate-800/70 bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Receipts & Verification</h2>
-          <p className="mt-2 text-sm text-slate-300 md:text-base">Each operation emits a signed receipt with payload, signature, public key, and previous hash. Verification checks the signature and hash‑chain continuity.</p>
-          <ul className="mt-4 space-y-2 text-sm text-slate-300">
-            <li>• Ed25519 signatures (W3C data integrity)</li>
-            <li>• SHA‑256 payload hashing and chaining</li>
-            <li>• Verifier can reconstruct and validate provenance</li>
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 2 · Architectural Blueprint & Technical Specs</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Three‑Pillar Architecture</h3>
+          <p className="mt-2 text-sm text-slate-300">Hard boundary enforcement between <span className="font-mono text-xs">@sonate/detect</span> (production sensors), <span className="font-mono text-xs">@sonate/lab</span> (research validators), and <span className="font-mono text-xs">@sonate/orchestrate</span> (infrastructure controllers). Each pillar is independently testable and governable.</p>
+          <div className="mt-4 grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/core</span> · The Protocol</h4>
+              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
+                <li>• Trust scoring algorithm tied to six principles; monitored across five dimensions (Reality Index, Trust Protocol, Ethical Alignment, Resonance Quality, Canvas Parity)</li>
+                <li>• Trust receipt generation with SHA‑256 and Ed25519</li>
+                <li>• Policy evaluation and tiering</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/detect</span> · The Sensor</h4>
+              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
+                <li>• Real‑time scoring under &lt;100ms latency</li>
+                <li>• Five‑dimension outputs and alert thresholds</li>
+                <li>• Streaming to receipt ledger</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/lab</span> · The Validator</h4>
+              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
+                <li>• Double‑blind experiments and replication kits</li>
+                <li>• Statistical methods: t‑tests, Cohen’s d</li>
+                <li>• Phase‑Shift Velocity for behavior change detection</li>
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
+              <h4 className="text-sm font-semibold text-slate-50"><span className="font-mono text-xs">@sonate/orchestrate</span> · The Controller</h4>
+              <ul className="mt-2 space-y-1.5 text-xs text-slate-400">
+                <li>• W3C DID/VC for agent identity and capability</li>
+                <li>• RBAC, policy routing, cryptographic audit logs</li>
+                <li>• Integration points for SIEM and compliance tooling</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-3 text-xs">
+            <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/yseeku-platform">yseeku‑platform</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Part 3 · Enterprise Trust Infrastructure & Compliance</h2>
+          <h3 className="mt-3 text-sm font-semibold text-slate-50">Trust Receipt Lifecycle</h3>
+          <p className="mt-2 text-sm text-slate-300">An AI interaction flows through detection, policy evaluation, and orchestration to produce a signed, hash‑chained receipt that is verifiable and immutable in the audit ledger.</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Identity Coherence & Monitoring</h3>
+          <p className="mt-2 text-sm text-slate-300">Persona vectors and cosine similarity help detect agent drift and instability. Combined with emergence metrics, they provide early warnings and trend insights.</p>
+          <h3 className="mt-4 text-sm font-semibold text-slate-50">Enterprise Readiness</h3>
+          <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
+            <li>• Compliance: EU AI Act alignment, SOC 2, GDPR data handling</li>
+            <li>• Deployment: cloud‑native, hybrid, and on‑prem options</li>
+            <li>• Security: zero‑trust posture, robust key management</li>
           </ul>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-800/70 bg-slate-950">
+        <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
+          <h2 className="text-xl font-semibold sm:text-2xl">Conclusion & Roadmap</h2>
+          <p className="mt-2 text-sm text-slate-300">SONATE delivers provable trust by combining constitutional principles with verifiable mechanisms and modular architecture. Near‑term roadmap includes expanded experiment kits, deeper SIEM integrations, and governance prototypes.</p>
+          <div className="mt-3 text-xs flex flex-wrap gap-3">
+            <a className="text-cyan-300 hover:text-cyan-200" href="https://symbi.world">symbi.world</a>
+            <a className="text-cyan-300 hover:text-cyan-200" href="https://gammatria.com">gammatria.com</a>
+            <a className="text-cyan-300 hover:text-cyan-200" href="https://yseeku.com">yseeku.com</a>
+          </div>
         </div>
       </section>
 
       <section className="bg-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-12 lg:px-0">
-          <h2 className="text-xl font-semibold sm:text-2xl">Outline</h2>
-          <ol className="mt-3 space-y-1.5 list-decimal list-inside text-[13px] text-slate-300">
-            <li>Problem: trust & emergence in autonomous agents</li>
-            <li>Design principles & threat model</li>
-            <li>Identity layer (DIDs & key management)</li>
-            <li>Credential & trust layer (Symphony)</li>
-            <li>Revocation, suspension & lifecycle</li>
-            <li>Provenance, receipts & verification flows</li>
-            <li>Emergence & drift analytics (Resonate)</li>
-            <li>Multi‑agent governance & community role</li>
-            <li>Security considerations & roadmap</li>
-          </ol>
-          <p className="mt-4 text-xs text-slate-400">Work‑in‑progress; content will evolve as repositories and demos are updated.</p>
+          <h2 className="text-xl font-semibold sm:text-2xl">How to Get Started</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-300">
+            <li>• Copy directly: adapt technical sections from <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/yseeku-platform">yseeku‑platform</a> README</li>
+            <li>• Lift from the vault: philosophical and governance materials from <a className="text-cyan-300 hover:text-cyan-200" href="https://github.com/s8ken/symbi-vault">symbi‑vault</a></li>
+            <li>• Flesh out the narrative: weave specs and research into a coherent enterprise trust story</li>
+          </ul>
+          <p className="mt-4 text-xs text-slate-400">Work‑in‑progress; the page will evolve as repositories and demos are updated.</p>
         </div>
       </section>
     </main>
   )
 }
-
