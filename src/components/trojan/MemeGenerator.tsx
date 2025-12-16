@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { sha256 } from '../../utils/crypto';
 import { Zap, Download, Share2, Shuffle, Rocket, Flame, Crown, Skull } from 'lucide-react';
 
 interface MemeTemplate {
@@ -108,18 +109,15 @@ export default function MemeGenerator() {
     setCustomText(randomText);
   };
 
-  const shareMeme = () => {
+  const shareMeme = async () => {
     if (!generatedMeme) return;
-    
-    const viralShareText = `🔥 VIRAL MEME ALERT! 🔥\n\n${generatedMeme}\n\n⚡ SYMBI Trojan - Making trust go viral!`;
-    
+    const base = `🔥 VIRAL MEME ALERT! 🔥\n\n${generatedMeme}\n\n⚡ SYMBI Trojan - Making trust go viral!`;
+    const proof = await sha256(base);
+    const text = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
     if (navigator.share) {
-      navigator.share({
-        title: 'SYMBI Trust Meme Generator',
-        text: viralShareText,
-      });
+      navigator.share({ title: 'SYMBI Trust Meme Generator', text });
     } else {
-      navigator.clipboard.writeText(viralShareText);
+      navigator.clipboard.writeText(text);
       setCopiedMeme(true);
       setTimeout(() => setCopiedMeme(false), 2000);
     }

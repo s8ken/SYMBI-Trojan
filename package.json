@@ -28,7 +28,8 @@
     "zustand": "^5.0.1",
     "axios": "^1.7.7",
     "html2canvas": "^1.4.1",
-    "qrcode.react": "^4.1.0"
+    "qrcode.react": "^4.1.0",
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",

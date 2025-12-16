@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { sha256 } from '../../utils/crypto';
 import { Trophy, TrendingUp, TrendingDown, Share2, Zap, Rocket, Crown, Star, Flame, Diamond } from 'lucide-react';
 
 interface LeaderboardEntry {
@@ -230,9 +231,9 @@ export default function TrustLeaderboard() {
       }
     });
 
-  const shareLeaderboard = () => {
+  const shareLeaderboard = async () => {
     const top3 = filteredEntries.slice(0, 3);
-    const shareText = `🏆 SYMBI TRUST LEADERBOARD UPDATE! 🏆\n\n` +
+    const base = `🏆 SYMBI TRUST LEADERBOARD UPDATE! 🏆\n\n` +
       top3.map(entry => 
         `${entry.rank}. ${entry.icon} ${entry.name}: ${entry.trustScore}% trust ${entry.change > 0 ? '📈' : entry.change < 0 ? '📉' : '➡️'}`
       ).join('\n') + `\n\n` +
@@ -241,7 +242,8 @@ export default function TrustLeaderboard() {
       `📉 ${entries.reduce((prev, current) => (prev.change < current.change) ? prev : current).name} (${Math.min(...entries.map(e => e.change))})\n\n` +
       `💡 Find out why: ${window.location.origin}/trust-leaderboard\n\n` +
       `#SYMBITrojan #TrustLeaderboard #CryptoTrust`;
-    
+    const proof = await sha256(base);
+    const shareText = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
     setShareText(shareText);
     
     if (navigator.share) {
@@ -255,14 +257,16 @@ export default function TrustLeaderboard() {
     }
   };
 
-  const shareEntry = (entry: LeaderboardEntry) => {
-    const shareText = `🚨 TRUST ALERT: ${entry.icon} ${entry.name}\n\n` +
+  const shareEntry = async (entry: LeaderboardEntry) => {
+    const base = `🚨 TRUST ALERT: ${entry.icon} ${entry.name}\n\n` +
       `${entry.viralQuote}\n\n` +
       `📊 Trust Score: ${entry.trustScore}%\n` +
       `📈 Change: ${entry.change > 0 ? '+' : ''}${entry.change}\n` +
       `🏆 Rank: #${entry.rank}\n\n` +
       `🔍 Full rankings: ${window.location.origin}/trust-leaderboard\n\n` +
       `#SYMBITrojan #TrustScore #${entry.name.replace(/\s+/g, '')}`;
+    const proof = await sha256(base);
+    const shareText = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
     
     if (navigator.share) {
       navigator.share({

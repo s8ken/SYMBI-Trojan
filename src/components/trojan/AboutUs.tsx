@@ -1,4 +1,6 @@
 import React from 'react'
+import DriftMonitor from './DriftMonitor'
+import { CONFIG } from '../../config'
 
 export default function AboutUs() {
   return (
@@ -159,6 +161,9 @@ export default function AboutUs() {
                 className="w-full rounded-xl border border-slate-800/80"
                 loading="lazy"
               />
+              <div className="mt-4">
+                <DriftMonitor />
+              </div>
             </div>
           </div>
         </div>
@@ -172,8 +177,8 @@ export default function AboutUs() {
               <p className="mt-2 max-w-xl text-sm text-slate-300 md:text-base">Two core systems, one shared mission: make autonomous agents observable, governable and safe enough for real-world deployment.</p>
             </div>
             <div className="flex flex-wrap gap-3 text-xs">
-              <a href="https://github.com/s8ken/SYMBI-Symphony" target="_blank" className="rounded-full border border-slate-700 px-4 py-1.5 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Symphony GitHub</a>
-              <a href="https://github.com/s8ken/SYMBI-Resonate" target="_blank" className="rounded-full border border-slate-700 px-4 py-1.5 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Resonate GitHub</a>
+              <a href={`https://github.com/${CONFIG.links.githubUser}/SYMBI-Symphony`} target="_blank" className="rounded-full border border-slate-700 px-4 py-1.5 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Symphony GitHub</a>
+              <a href={`https://github.com/${CONFIG.links.githubUser}/SYMBI-Resonate`} target="_blank" className="rounded-full border border-slate-700 px-4 py-1.5 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Resonate GitHub</a>
             </div>
           </div>
           <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -318,9 +323,9 @@ export default function AboutUs() {
                 <p className="mt-1 text-xs text-slate-400">If you’re here for the memes, stay for the protocol. $SYMBI is the community key to a living AI trust stack that anyone can inspect, build on and help govern.</p>
               </div>
               <div className="flex flex-wrap gap-3 text-xs">
-                <a href="https://dex.example.com/SYMBI" target="_blank" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">Trade on DEX</a>
-                <a href="https://symbi.world" target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Visit symbi.world</a>
-                <a href="https://github.com/s8ken" target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Explore the repos</a>
+                <a href={CONFIG.links.dex} target="_blank" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">Trade on DEX</a>
+                <a href={CONFIG.links.community} target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Visit symbi.world</a>
+                <a href={`https://github.com/${CONFIG.links.githubUser}`} target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">Explore the repos</a>
               </div>
             </div>
           </div>

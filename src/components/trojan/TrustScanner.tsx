@@ -1,4 +1,7 @@
 import React, { useState, useCallback } from 'react';
+import axios from 'axios';
+import { CONFIG } from '../../config';
+import { sha256 } from '../../utils/crypto';
 import { Search, Share2, Trophy, TrendingUp, AlertCircle, CheckCircle, Zap, Rocket } from 'lucide-react';
 
 interface TrustScan {
@@ -118,12 +121,20 @@ export default function TrustScanner() {
     
     setIsScanning(true);
     
-    // Simulate viral-worthy scanning with dramatic timing
-    await new Promise(resolve => setTimeout(resolve, 2500));
-    
-    // Get mock data or generate viral-worthy random data
-    const result = mockTrustData[url.toLowerCase()] || generateViralTrustData(url);
-    setScanResult(result);
+    try {
+      if (CONFIG.api.trustScanEndpoint) {
+        const res = await axios.post(CONFIG.api.trustScanEndpoint, { url });
+        const data: TrustScan = res.data;
+        setScanResult(data);
+      } else {
+        await new Promise(r => setTimeout(r, 1200));
+        const result = mockTrustData[url.toLowerCase()] || generateViralTrustData(url);
+        setScanResult(result);
+      }
+    } catch {
+      const result = mockTrustData[url.toLowerCase()] || generateViralTrustData(url);
+      setScanResult(result);
+    }
     setIsScanning(false);
   }, [url]);
 
@@ -180,7 +191,7 @@ export default function TrustScanner() {
     }
   }, []);
 
-  const shareResults = useCallback(() => {
+  const shareResults = useCallback(async () => {
     if (!scanResult) return;
     
     let shareText = '';
@@ -192,6 +203,9 @@ export default function TrustScanner() {
     } else {
       shareText = `🚨 SYMBI TRUST SCAN RESULTS 🚨\n\n${scanResult.viralQuote}\n\n${scanResult.shareableBadge}\n\n🔥 Make this go viral! ${window.location.origin}`;
     }
+    const proof = await sha256(shareText);
+    const proofUrl = `${window.location.origin}?proof=${proof}`;
+    shareText += `\n\n🔏 Proof: ${proofUrl}`;
     
     if (navigator.share) {
       navigator.share({

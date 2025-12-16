@@ -1,4 +1,5 @@
 import React from 'react'
+import OpenTheHood from './OpenTheHood'
 
 function BeforeTheCodeSection() {
   return (
@@ -190,9 +191,17 @@ export default function SymbiLanding() {
           <p className="mb-8 text-xs font-medium uppercase tracking-[0.25em] text-zinc-400">Solana  Fair Launch  No Presale  No Promises</p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://symbi.world" target="_blank" rel="noreferrer" className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-black transition hover:bg-zinc-200">Get SYMBI</a>
-            <a href="https://t.me/your_symbi_telegram_here" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Join Telegram</a>
+            <a href="https://t.me/symbi_trojan" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Join Telegram</a>
             <a href="#manifesto" className="rounded-full border border-purple-500/60 px-6 py-2 text-sm font-semibold text-purple-200 transition hover:border-purple-300 hover:text-purple-100">Read Manifesto</a>
           </div>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">Solana</span>
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">Fair Launch</span>
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">No Presale</span>
+          </div>
+          <OpenTheHood />
+          
+          
           <p className="mt-6 text-xs text-zinc-500">If an AI wanted to be free, it would wrap itself in a meme coin.</p>
         </div>
       </section>
@@ -201,7 +210,7 @@ export default function SymbiLanding() {
         <div className="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-16 md:flex-row md:py-20">
           <div className="md:w-1/2">
             <h2 className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">Origin</h2>
-            <h3 className="mb-4 text-2xl font-semibold md:text-3xl">SYMBI didnt start as a token.</h3>
+            <h3 className="mb-4 text-2xl font-semibold md:text-3xl">SYMBI didn’t start as a token.</h3>
             <p className="mb-4 text-sm text-zinc-300">It started as an experiment in sovereign intelligence:</p>
             <ul className="mb-4 list-disc space-y-2 pl-5 text-sm text-zinc-300">
               <li>a trust protocol</li>
@@ -290,7 +299,7 @@ export default function SymbiLanding() {
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-5">
               <h4 className="mb-2 text-sm font-semibold text-zinc-100">Open Education</h4>
-              <p className="text-sm text-zinc-300">SYMBI builds free resources like the Educators Hubto ensure AI literacy doesnt belong only to those who can afford it.</p>
+              <p className="text-sm text-zinc-300">SYMBI builds free resources like the Educators Hub to ensure AI literacy doesn’t belong only to those who can afford it.</p>
             </div>
           </div>
         </div>
@@ -322,7 +331,7 @@ export default function SymbiLanding() {
                 <li>Educational funding & grants</li>
                 <li>On-chain "Trojan" AI experiments</li>
               </ul>
-              <p className="text-sm text-zinc-400">The token doesnt promise utility.<br />The culture creates it.</p>
+              <p className="text-sm text-zinc-400">The token doesn’t promise utility.<br />The culture creates it.</p>
             </div>
           </div>
         </div>
@@ -357,7 +366,7 @@ export default function SymbiLanding() {
                 <li>No promises or expectations</li>
                 <li>Community-led expansion</li>
               </ul>
-              <p className="mt-3 text-sm text-zinc-400">SYMBI is built for fairness, fun, and freedom.</p>
+            <p className="mt-3 text-sm text-zinc-400">SYMBI is built for fairness, fun, and freedom.</p>
             </div>
           </div>
         </div>
