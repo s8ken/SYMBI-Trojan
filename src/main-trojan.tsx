@@ -12,6 +12,9 @@ import './index.css'
 // Default styles that can be overridden by your app
 import '@solana/wallet-adapter-react-ui/styles.css'
 
+// Signal that JS has loaded to hide static fallback
+document.documentElement.classList.add("js-loaded");
+
 const network = WalletAdapterNetwork.Mainnet
 const endpoint = 'https://api.mainnet-beta.solana.com'
 const wallets = [new PhantomWalletAdapter()]
