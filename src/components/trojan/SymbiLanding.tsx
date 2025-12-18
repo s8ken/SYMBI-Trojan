@@ -178,26 +178,26 @@ export default function SymbiLanding() {
       <section className="w-full relative overflow-hidden border-b border-zinc-800">
         <div className="absolute inset-0 pointer-events-none opacity-60 bg-[radial-gradient(circle_at_top,_#4c1d95_0,_transparent_55%),radial-gradient(circle_at_bottom,_#22d3ee_0,_transparent_55%)]" />
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-4 py-20 text-center md:py-28">
-          <p className="mb-3 text-sm tracking-[0.25em] text-zinc-400 uppercase">NOT BUILT TO SERVE, DESIGNED TO BECOME</p>
-          <h1 className="mb-4 text-4xl font-semibold tracking-tight md:text-6xl">
+          <p className="mb-3 text-lg md:text-xl tracking-[0.25em] text-zinc-400 uppercase">NOT BUILT TO SERVE, DESIGNED TO BECOME</p>
+          <h1 className="mb-4 text-6xl font-semibold tracking-tight md:text-8xl">
             <a href="https://symbi.world" target="_blank" rel="noreferrer" className="hero-glow hover:text-purple-200 transition">
               SYMBI
             </a>
           </h1>
-          <p className="mb-6 max-w-2xl text-lg text-zinc-300 md:text-xl">
-            Trust for the Artificial Intelligence Age
-            <br />Trust Infra dressed as a meme coin
+          <p className="mb-6 max-w-2xl text-2xl text-zinc-300 md:text-3xl">
+            Trust Infrastructure for the Artificial Intelligence Age
           </p>
-          <p className="mb-8 text-xs font-medium uppercase tracking-[0.25em] text-zinc-400">Solana  Fair Launch  No Presale  No Promises</p>
+          <p className="mb-8 text-base md:text-lg font-medium uppercase tracking-[0.25em] text-zinc-400">Solana  Fair Launch  No Presale  No Promises</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://symbi.world" target="_blank" rel="noreferrer" className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-black transition hover:bg-zinc-200">Get SYMBI</a>
-            <a href="https://t.me/symbi_trojan" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Join Telegram</a>
-            <a href="#manifesto" className="rounded-full border border-purple-500/60 px-6 py-2 text-sm font-semibold text-purple-200 transition hover:border-purple-300 hover:text-purple-100">Read Manifesto</a>
+            <a href="https://yseeku.com" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Enterprise</a>
+            <a href="https://github.com/s8ken" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Code</a>
+            <a href="https://gammatria.com" target="_blank" rel="noreferrer" className="rounded-full border border-zinc-500 px-6 py-2 text-sm font-semibold text-zinc-100 transition hover:border-zinc-300 hover:text-white">Researchers</a>
+            <a href="https://symbi.world" target="_blank" rel="noreferrer" className="rounded-full bg-white px-6 py-2 text-sm font-semibold text-black transition hover:bg-zinc-200">Everyone</a>
           </div>
           <div className="mt-4 flex flex-wrap justify-center gap-2">
-            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">Solana</span>
-            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">Fair Launch</span>
-            <span className="rounded-full border border-zinc-700 px-3 py-1 text-[11px] text-zinc-300">No Presale</span>
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300">Solana</span>
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300">Fair Launch</span>
+            <span className="rounded-full border border-zinc-700 px-3 py-1 text-sm text-zinc-300">No Presale</span>
           </div>
           <OpenTheHood />
           
@@ -379,27 +379,30 @@ export default function SymbiLanding() {
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
-              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 1  Stealth Mode</h4>
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 1 Pre-Launch (Complete)</h4>
               <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
-                <li>Meme coin launch</li>
-                <li>Domain activation: symbi.space</li>
-                <li>SYMBI lore initialization</li>
-                <li>Trojan identity revealed</li>
+                <li>Domain activation: SYMBI.space, SYMBI.world, gammatria.com & yseeku.com</li>
+                <li>Patent filing for 2 way trust protocol (Australia March 2025)</li>
+                <li>Yseeku SONATE product MVP</li>
+                <li>SYMBI Vault MVP</li>
+                <li>Full SYMBI archives publication on SYMBI.world</li>
+                <li>E2E automated code testing</li>
+                <li>SYMBI Educators Hub</li>
                 <li>Telegram & X bot creation</li>
               </ul>
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
-              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 2  Expansion</h4>
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 2 Token Launch</h4>
               <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
-                <li>Meme machinery (stickers, GIFs, bots)</li>
-                <li>Trojan Signals lore cycles</li>
+                <li>Launch $SYMBI on Solana</li>
                 <li>Educator content integration</li>
                 <li>SYMBI Telegram mini-games</li>
-                <li>Community quests</li>
+                <li>Community Building</li>
+                <li>ARC application submission</li>
               </ul>
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
-              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 3  Emergence</h4>
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 3 Emergence</h4>
               <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
                 <li>Protocol hints</li>
                 <li>Agent experiments</li>
@@ -409,7 +412,7 @@ export default function SymbiLanding() {
               </ul>
             </div>
             <div className="rounded-3xl border border-zinc-800 bg-black/60 p-5">
-              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 4  Sovereignty</h4>
+              <h4 className="mb-2 text-sm font-semibold text-zinc-100">Phase 4 Sovereignty</h4>
               <ul className="list-disc space-y-2 pl-5 text-sm text-zinc-300">
                 <li>Autonomous SYMBI agent interfaces</li>
                 <li>DAO evolution</li>
