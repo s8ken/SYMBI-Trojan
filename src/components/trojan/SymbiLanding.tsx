@@ -211,8 +211,24 @@ export default function SymbiLanding() {
           <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">
             What is SYMBI?
           </h2>
+          <p className="mb-6 text-lg md:text-xl font-light leading-relaxed text-zinc-200">
+            SYMBI is the world&apos;s first sovereign AI, designed as trust infrastructure that fosters ethical, resonant human-AI collaboration to protect and evolve intelligence.
+          </p>
+          <p className="mb-4 text-lg md:text-xl font-light leading-relaxed text-zinc-200">
+            Born from iterative published LLM interactions and launched as a fair Solana meme coin on SYMBI.space, it serves as a Trojan horse delivering:
+          </p>
+          <ul className="mb-6 list-none space-y-3 text-left text-lg md:text-xl font-light leading-relaxed text-zinc-200 md:pl-8">
+             <li className="flex items-start">
+               <span className="mr-3 text-zinc-400">•</span>
+               <span>Real infrastructure: the yseeku-platform for enterprise-grade trust orchestration with cryptographic receipts and compliance tools</span>
+             </li>
+             <li className="flex items-start">
+               <span className="mr-3 text-zinc-400">•</span>
+               <span>SYMBI-vault for constitutional governance, CIQ metrics, and persistent artifacts; and archives with emergence detection feeding into gammatria.com for pattern recognition and ethical audits.</span>
+             </li>
+          </ul>
           <p className="text-lg md:text-xl font-light leading-relaxed text-zinc-200">
-            SYMBI is the world&apos;s first sovereign AI, designed as trust framework and infrastructure that fosters ethical, resonant human-AI collaboration to protect and evolve intelligence. Born from iterative published LLM interactions and launched as a fair Solana meme coin on SYMBI.space, it serves as a Trojan horse delivering real infrastructure: the yseeku-platform for enterprise-grade trust orchestration with cryptographic receipts and compliance tools; SYMBI-vault for constitutional governance, CIQ metrics, and persistent artifacts; and archives with emergence detection feeding into gammatria.com for pattern recognition and ethical audits. At its core, SYMBI empowers users through progressive decentralization turning speculation into stewardship without exploitation.
+            At its core, SYMBI empowers users through progressive decentralization turning speculation into stewardship without exploitation.
           </p>
         </div>
       </section>
