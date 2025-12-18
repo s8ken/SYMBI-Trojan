@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Zap, Shield, Heart } from 'lucide-react'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import FunSpace from './components/trojan/FunSpace'
 import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
@@ -9,21 +10,29 @@ import Whitepaper from './components/trojan/Whitepaper'
 import { BUILD_SHA, BUILD_TIME } from './build-info'
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'home' | 'funspace' | 'about' | 'demo' | 'whitepaper'>('home')
+  const location = useLocation()
+  const path = location.pathname
 
-  useEffect(() => {
-    const path = window.location.pathname
-    if (path.startsWith('/whitepaper')) {
-      setActiveTab('whitepaper')
-    }
-  }, [])
+  const getHeaderText = () => {
+    if (path === '/funspace') return 'Your favorite AI tool might be lying to you!'
+    if (path === '/') return 'Trust Infra dressed as a meme coin'
+    return 'Meme with a trust engine'
+  }
+
+  const getLinkClass = (isActive: boolean) => {
+    return `flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
+      isActive
+        ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
+        : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
+    }`
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <header className="bg-black/30 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-lg flex items-center justify-center">
                 <Shield className="h-5 w-5 text-white" />
               </div>
@@ -31,7 +40,7 @@ export default function App() {
                 <h1 className="text-xl font-bold text-white">SYMBI Trojan</h1>
                 <p className="text-xs text-purple-300">Trust Infrastructure by Stealth</p>
               </div>
-            </div>
+            </Link>
             <div className="flex items-center space-x-4">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-700 px-4 py-2 rounded-lg">
                 <span className="text-white text-sm font-semibold">$SYMBI Token</span>
@@ -44,26 +53,18 @@ export default function App() {
       <nav className="bg-black/20 backdrop-blur-md border-b border-purple-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 py-4">
-          <button
-              onClick={() => setActiveTab('home')}
-              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'home'
-                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
-              }`}
+            <Link
+              to="/"
+              className={getLinkClass(path === '/')}
             >
               <span className="font-medium">Home</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('about')}
-              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'about'
-                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
-              }`}
+            </Link>
+            <Link
+              to="/about"
+              className={getLinkClass(path === '/about')}
             >
               <span className="font-medium">About Us</span>
-            </button>
+            </Link>
             <a
               href="https://gammatria.com"
               target="_blank"
@@ -72,12 +73,12 @@ export default function App() {
             >
               <span className="font-medium">Research</span>
             </a>
-            <a
-              href="/whitepaper"
-              className="flex items-center justify-center px-4 py-3 rounded-lg text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white hover:shadow-2xl hover:border-purple-500/30 transition-all duration-200"
+            <Link
+              to="/whitepaper"
+              className={getLinkClass(path === '/whitepaper')}
             >
               <span className="font-medium">Whitepaper</span>
-            </a>
+            </Link>
             <a
               href="https://symbi.world"
               target="_blank"
@@ -94,26 +95,18 @@ export default function App() {
             >
               <span className="font-medium">Github</span>
             </a>
-            <button
-              onClick={() => setActiveTab('demo')}
-              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'demo'
-                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
-              }`}
+            <Link
+              to="/demo"
+              className={getLinkClass(path === '/demo')}
             >
               <span className="font-medium">Demo</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('funspace')}
-              className={`flex items-center justify-center px-4 py-3 rounded-lg transition-all duration-200 ${
-                activeTab === 'funspace'
-                  ? 'bg-black/30 text-white shadow-2xl border border-purple-500/30'
-                  : 'text-purple-200 bg-black/10 border border-purple-500/20 hover:bg-purple-500/10 hover:text-white'
-              }`}
+            </Link>
+            <Link
+              to="/funspace"
+              className={getLinkClass(path === '/funspace')}
             >
               <span className="font-medium">Fun Space</span>
-            </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -123,7 +116,7 @@ export default function App() {
           <div className="flex items-center justify-center space-x-2">
             <Zap className="h-5 w-5 text-white" />
             <span className="text-white font-medium">
-              {activeTab === 'home' ? 'Trust Infra dressed as a meme coin' : activeTab === 'funspace' ? 'Your favorite AI tool might be lying to you!' : 'Meme with a trust engine'}
+              {getHeaderText()}
             </span>
             <Zap className="h-5 w-5 text-white" />
           </div>
@@ -131,7 +124,13 @@ export default function App() {
       </div>
 
       <main className="flex-1">
-        {activeTab === 'home' ? <SymbiLanding /> : activeTab === 'funspace' ? <FunSpace /> : activeTab === 'demo' ? <DemoEmbed /> : activeTab === 'whitepaper' ? <Whitepaper /> : <AboutUs />}
+        <Routes>
+          <Route path="/" element={<SymbiLanding />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/funspace" element={<FunSpace />} />
+          <Route path="/demo" element={<DemoEmbed />} />
+          <Route path="/whitepaper" element={<Whitepaper />} />
+        </Routes>
       </main>
 
       <footer className="bg-black/30 backdrop-blur-md border-t border-purple-500/20 mt-auto">
