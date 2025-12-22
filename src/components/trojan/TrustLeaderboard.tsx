@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { sha256 } from '../../utils/crypto';
 import { Trophy, TrendingUp, TrendingDown, Share2, Zap, Rocket, Crown, Star, Flame, Diamond } from 'lucide-react';
 
 interface LeaderboardEntry {
@@ -231,9 +230,9 @@ export default function TrustLeaderboard() {
       }
     });
 
-  const shareLeaderboard = async () => {
+  const shareLeaderboard = () => {
     const top3 = filteredEntries.slice(0, 3);
-    const base = `🏆 SYMBI TRUST LEADERBOARD UPDATE! 🏆\n\n` +
+    const shareText = `🏆 SYMBI TRUST LEADERBOARD UPDATE! 🏆\n\n` +
       top3.map(entry => 
         `${entry.rank}. ${entry.icon} ${entry.name}: ${entry.trustScore}% trust ${entry.change > 0 ? '📈' : entry.change < 0 ? '📉' : '➡️'}`
       ).join('\n') + `\n\n` +
@@ -242,8 +241,7 @@ export default function TrustLeaderboard() {
       `📉 ${entries.reduce((prev, current) => (prev.change < current.change) ? prev : current).name} (${Math.min(...entries.map(e => e.change))})\n\n` +
       `💡 Find out why: ${window.location.origin}/trust-leaderboard\n\n` +
       `#SYMBITrojan #TrustLeaderboard #CryptoTrust`;
-    const proof = await sha256(base);
-    const shareText = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
+    
     setShareText(shareText);
     
     if (navigator.share) {
@@ -257,16 +255,14 @@ export default function TrustLeaderboard() {
     }
   };
 
-  const shareEntry = async (entry: LeaderboardEntry) => {
-    const base = `🚨 TRUST ALERT: ${entry.icon} ${entry.name}\n\n` +
+  const shareEntry = (entry: LeaderboardEntry) => {
+    const shareText = `🚨 TRUST ALERT: ${entry.icon} ${entry.name}\n\n` +
       `${entry.viralQuote}\n\n` +
       `📊 Trust Score: ${entry.trustScore}%\n` +
       `📈 Change: ${entry.change > 0 ? '+' : ''}${entry.change}\n` +
       `🏆 Rank: #${entry.rank}\n\n` +
       `🔍 Full rankings: ${window.location.origin}/trust-leaderboard\n\n` +
       `#SYMBITrojan #TrustScore #${entry.name.replace(/\s+/g, '')}`;
-    const proof = await sha256(base);
-    const shareText = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
     
     if (navigator.share) {
       navigator.share({
@@ -287,8 +283,12 @@ export default function TrustLeaderboard() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-4">
             <Trophy className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2">Trust Rankings</h1>
-          <p className="text-xl text-purple-200 mb-4">Current trust scores and trends.</p>
+          <h1 className="text-4xl font-bold text-white mb-2">🏆 TRUST LEADERBOARD</h1>
+          <p className="text-xl text-purple-200 mb-4">Who\'s really trustworthy in crypto?</p>
+          <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg p-4">
+            <p className="text-white font-bold text-lg">🔥 WEEKLY TRUST RANKINGS! 🔥</p>
+            <p className="text-purple-100">Share your favorites and call out the frauds!</p>
+          </div>
         </div>
 
         {/* Controls */}
@@ -366,7 +366,7 @@ export default function TrustLeaderboard() {
                       </span>
                       {entry.isTrending && (
                         <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-bold animate-pulse">
-                          TRENDING
+                          TRENDING 🔥
                         </span>
                       )}
                     </div>

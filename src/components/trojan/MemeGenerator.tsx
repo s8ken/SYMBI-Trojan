@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { sha256 } from '../../utils/crypto';
-import { Zap, Download, Share2, Shuffle, FileText, Crown } from 'lucide-react';
+import { Zap, Download, Share2, Shuffle, Rocket, Flame, Crown, Skull } from 'lucide-react';
 
 interface MemeTemplate {
   id: string;
@@ -92,7 +91,7 @@ export default function MemeGenerator() {
         ? customText.replace('[AI Tool]', `${selectedScore.icon} ${selectedScore.tool}`)
         : customText;
       
-      const memeText = `${viralText}\n\n🎯 TRUST SCORE: ${selectedScore.score}%\n\n🔍 Scanned with SYMBI Trojan\n� Share: ${window.location.origin}`;
+      const memeText = `${viralText}\n\n🎯 TRUST SCORE: ${selectedScore.score}%\n\n🔍 Scanned with SYMBI Trojan\n💎 Make this go viral! ${window.location.origin}`;
       
       setGeneratedMeme(memeText);
       setIsGenerating(false);
@@ -109,15 +108,18 @@ export default function MemeGenerator() {
     setCustomText(randomText);
   };
 
-  const shareMeme = async () => {
+  const shareMeme = () => {
     if (!generatedMeme) return;
-    const base = `SYMBI Trust Report\n\n${generatedMeme}\n\nSYMBI Trojan - Trust Infrastructure by Stealth`;
-    const proof = await sha256(base);
-    const text = `${base}\n\n🔏 Proof: ${window.location.origin}?proof=${proof}`;
+    
+    const viralShareText = `🔥 VIRAL MEME ALERT! 🔥\n\n${generatedMeme}\n\n⚡ SYMBI Trojan - Making trust go viral!`;
+    
     if (navigator.share) {
-      navigator.share({ title: 'SYMBI Trust Meme Generator', text });
+      navigator.share({
+        title: 'SYMBI Trust Meme Generator',
+        text: viralShareText,
+      });
     } else {
-      navigator.clipboard.writeText(text);
+      navigator.clipboard.writeText(viralShareText);
       setCopiedMeme(true);
       setTimeout(() => setCopiedMeme(false), 2000);
     }
@@ -125,9 +127,9 @@ export default function MemeGenerator() {
 
   const getViralIcon = (potential: string) => {
     switch (potential) {
-      case 'high': return <Zap className="h-5 w-5 text-yellow-500" />;
-      case 'medium': return <span className="text-gray-400">•</span>;
-      case 'viral': return <Zap className="h-5 w-5 text-orange-400" />;
+      case 'viral': return <Flame className="h-5 w-5 text-red-500" />;
+      case 'high': return <Rocket className="h-5 w-5 text-orange-500" />;
+      case 'medium': return <Zap className="h-5 w-5 text-yellow-500" />;
       default: return <span className="text-gray-500">•</span>;
     }
   };
@@ -144,11 +146,15 @@ export default function MemeGenerator() {
       <div className="max-w-6xl mx-auto">
         {/* Viral Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mb-4">
-            <FileText className="h-8 w-8 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-red-500 rounded-full mb-4 animate-bounce">
+            <Flame className="h-8 w-8 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2">Trust Report Composer</h1>
-          <p className="text-xl text-purple-200 mb-4">Compose concise trust summaries and share responsibly.</p>
+          <h1 className="text-4xl font-bold text-white mb-2">🔥 MEME TRUST GENERATOR 🔥</h1>
+          <p className="text-xl text-purple-200 mb-4">Create VIRAL memes with REAL trust data!</p>
+          <div className="bg-gradient-to-r from-yellow-500 to-red-500 rounded-lg p-4">
+            <p className="text-white font-bold text-lg">⚡ MAKE TRUST MEMES GO VIRAL! ⚡</p>
+            <p className="text-purple-100">Share your memes and earn $SYMBI tokens!</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -158,7 +164,7 @@ export default function MemeGenerator() {
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6">
               <h3 className="text-white font-bold text-lg mb-4 flex items-center">
                 <Crown className="h-5 w-5 mr-2 text-yellow-400" />
-                Choose a template
+                CHOOSE VIRAL TEMPLATE
               </h3>
               <div className="grid grid-cols-1 gap-3">
                 {memeTemplates.map((template) => (
@@ -232,7 +238,7 @@ export default function MemeGenerator() {
               </p>
             </div>
 
-            {/* Actions */}
+            {/* Action Buttons */}
             <div className="space-y-3">
               <button
                 onClick={generateMeme}
@@ -242,11 +248,12 @@ export default function MemeGenerator() {
                 {isGenerating ? (
                   <div className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white mr-3"></div>
-                    Generating…
+                    GENERATING VIRAL MEME...
                   </div>
                 ) : (
                   <div className="flex items-center justify-center">
-                    Compose Report
+                    <Flame className="h-6 w-6 mr-2" />
+                    GENERATE MEME!
                   </div>
                 )}
               </button>
@@ -257,18 +264,18 @@ export default function MemeGenerator() {
               >
                 <div className="flex items-center justify-center">
                   <Shuffle className="h-5 w-5 mr-2" />
-                  Randomize
+                  RANDOMIZE EVERYTHING!
                 </div>
               </button>
             </div>
           </div>
 
-            {/* Right Panel - Generated Report */}
+          {/* Right Panel - Generated Meme */}
           <div className="space-y-6">
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-6">
               <h3 className="text-white font-bold text-lg mb-4 flex items-center">
-                <FileText className="h-5 w-5 mr-2 text-purple-400" />
-                Your Report
+                <Skull className="h-5 w-5 mr-2 text-purple-400" />
+                YOUR VIRAL MEME
               </h3>
               
               {generatedMeme ? (
@@ -286,7 +293,7 @@ export default function MemeGenerator() {
                     >
                       <div className="flex items-center justify-center">
                         <Share2 className="h-5 w-5 mr-2" />
-                        {copiedMeme ? 'Copied' : 'Share Results'}
+                        {copiedMeme ? 'COPIED!' : 'GO VIRAL!'}
                       </div>
                     </button>
                     
@@ -308,29 +315,44 @@ export default function MemeGenerator() {
               ) : (
                 <div className="text-center py-12">
                   <div className="text-6xl mb-4">🎨</div>
-                  <p className="text-purple-300 text-lg">Compose your first trust report.</p>
-                  <p className="text-purple-400 text-sm mt-2">Your report will appear here and be ready to share</p>
+                  <p className="text-purple-300 text-lg">Generate your first viral meme!</p>
+                  <p className="text-purple-400 text-sm mt-2">
+                    Your meme will appear here and be ready to share
+                  </p>
                 </div>
               )}
             </div>
 
-            {/* Sharing Guidelines */}
-            <div className="bg-black/20 rounded-lg p-6 border border-white/10">
-              <h3 className="text-white font-bold text-lg mb-3 flex items-center">
-                <FileText className="h-5 w-5 mr-2" />
-                Sharing Guidelines
+            {/* Viral Tips */}
+            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg p-6">
+              <h3 className="text-black font-bold text-lg mb-3 flex items-center">
+                <Flame className="h-5 w-5 mr-2" />
+                VIRAL TIPS 🔥
               </h3>
-              <ul className="text-purple-100 space-y-2 text-sm">
-                <li>• Include links to verification or receipts when possible</li>
-                <li>• Provide context for why a score is high or low</li>
-                <li>• Avoid personal attacks; focus on practices and data</li>
+              <ul className="text-black space-y-2 text-sm">
+                <li>• Use trending AI/crypto tools for maximum engagement</li>
+                <li>• Surprise people with unexpected trust scores</li>
+                <li>• Call out popular tools with low scores</li>
+                <li>• Flex about finding high-trust alternatives</li>
+                <li>• Tag friends who use the tools you scan</li>
+                <li>• Post during peak crypto Twitter hours</li>
               </ul>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <div className="mt-12 text-center text-purple-300 text-sm">Share responsibly and include proof links.</div>
+        <div className="mt-12 text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg p-6">
+            <p className="text-white font-bold text-xl mb-2">🔥 MAKE MEMES GO VIRAL! 🔥</p>
+            <p className="text-purple-100 mb-3">Share your trust memes and earn $SYMBI tokens!</p>
+            <div className="flex justify-center items-center space-x-2">
+              <Rocket className="h-5 w-5 text-white" />
+              <span className="text-white font-bold">SYMBI Trojan - Meme Your Way to Trust!</span>
+              <Rocket className="h-5 w-5 text-white" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

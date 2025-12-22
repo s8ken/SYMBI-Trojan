@@ -8,10 +8,10 @@ import TrustLeaderboard from './TrustLeaderboard'
 export default function FunSpace() {
   const [activeDemo, setActiveDemo] = useState<'scanner' | 'game' | 'meme' | 'leaderboard'>('scanner')
   const demos = [
-    { id: 'scanner', name: 'Trust Scanner', icon: Search, viralHook: 'Assess and share trust signals for AI and crypto tools.' },
-    { id: 'game', name: 'Trust or Bust', icon: Trophy, viralHook: 'Practice identifying trustworthy system behaviors.' },
-    { id: 'meme', name: 'Trust Report Composer', icon: Share2, viralHook: 'Compose a succinct trust summary and share responsibly.' },
-    { id: 'leaderboard', name: 'Trust Rankings', icon: TrendingUp, viralHook: 'See current trust scores and trends across popular tools.' }
+    { id: 'scanner', name: 'Trust Scanner', icon: Search, viralHook: 'Your favorite AI tool might be lying to you!' },
+    { id: 'game', name: 'Trust or Bust', icon: Trophy, viralHook: 'Can you spot trustworthy AI better than your friends?' },
+    { id: 'meme', name: 'Meme Generator', icon: Share2, viralHook: 'Make memes that actually mean something!' },
+    { id: 'leaderboard', name: 'Trust Leaderboard', icon: TrendingUp, viralHook: 'Is your favorite influencer actually trustworthy?' }
   ]
 
   const renderActiveDemo = () => {
