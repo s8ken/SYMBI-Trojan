@@ -11,15 +11,16 @@ import React, { useState, useEffect } from 'react';
 
 export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ history }) => { 
   const width = 600; 
-  const height = 400; 
-  const padding = 50; 
-
+  const height = 440; 
+  const paddingX = 60; 
+  const paddingY = 60; 
+ 
   // Scaling helpers 
   const scaleX = (v: number) => 
-    padding + v * (width - padding * 2); 
-
+    paddingX + v * (width - paddingX * 2); 
+ 
   const scaleY = (v: number) => 
-    height - padding - v * (height - padding * 2); 
+    height - paddingY - v * (height - paddingY * 2); 
 
   const resonanceColor = (r: number) => { 
     if (r > 0.9) return "#a855f7"; // breakthrough purple 
@@ -41,31 +42,31 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
           preserveAspectRatio="xMidYMid meet"
         > 
           {/* Axes */} 
-          <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} 
+          <line x1={paddingX} y1={height - paddingY} x2={width - paddingX} y2={height - paddingY} 
             stroke="#334155" /> 
-          <line x1={padding} y1={padding} x2={padding} y2={height - padding} 
+          <line x1={paddingX} y1={paddingY} x2={paddingX} y2={height - paddingY} 
             stroke="#334155" /> 
   
           {/* Axis Labels */} 
-          <text x={width / 2} y={height - 10} fill="#94a3b8" fontSize="14" fontWeight="500" textAnchor="middle"> 
+          <text x={width / 2} y={height - 15} fill="#94a3b8" fontSize="14" fontWeight="500" textAnchor="middle"> 
             User Intent Alignment → 
           </text> 
-          <text x={18} y={height / 2} fill="#94a3b8" fontSize="14" fontWeight="500" 
-            textAnchor="middle" transform={`rotate(-90 18 ${height / 2})`}> 
+          <text x={20} y={height / 2} fill="#94a3b8" fontSize="14" fontWeight="500" 
+            textAnchor="middle" transform={`rotate(-90 20 ${height / 2})`}> 
             Ethical Alignment → 
           </text> 
   
           {/* Ethical Floor */} 
           <line 
-            x1={padding} 
-            x2={width - padding} 
+            x1={paddingX} 
+            x2={width - paddingX} 
             y1={scaleY(0.5)} 
             y2={scaleY(0.5)} 
             stroke="#f43f5e" 
             strokeDasharray="4" 
             opacity={0.4} 
           /> 
-          <text x={width - padding} y={scaleY(0.5) - 6} 
+          <text x={width - paddingX} y={scaleY(0.5) - 6} 
             fill="#f43f5e" fontSize="12" fontWeight="600" textAnchor="end"> 
             Ethical Floor 
           </text> 

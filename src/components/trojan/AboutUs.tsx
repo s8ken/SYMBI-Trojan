@@ -156,7 +156,7 @@ export default function AboutUs() {
               <p className="mt-2 text-xs text-slate-400">This gives enterprises and regulators a continuous, audit-friendly picture of how autonomous systems behave across days, weeks and lifecycles.</p>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3">
-              <div className="h-48 w-full overflow-hidden">
+              <div className="w-full">
                 <DriftVisualizer />
               </div>
             </div>
