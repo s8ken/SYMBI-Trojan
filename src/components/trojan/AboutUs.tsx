@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import DriftVisualizer from './DriftVisualizer'
+import DriftEmergenceVisualizer from './DriftVisualizer'
 
 export default function AboutUs() {
   return (
@@ -157,7 +157,7 @@ export default function AboutUs() {
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3">
               <div className="w-full">
-                <DriftVisualizer />
+                <DriftEmergenceVisualizer />
               </div>
             </div>
           </div>

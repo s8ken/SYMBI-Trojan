@@ -5,6 +5,7 @@ import FunSpace from './components/trojan/FunSpace'
 import AboutUs from './components/trojan/AboutUs'
 import SymbiLanding from './components/trojan/SymbiLanding'
 import DemoEmbed from './components/trojan/DemoEmbed'
+import Whitepaper from './components/trojan/Whitepaper'
 import './App.css'
 import { BUILD_SHA, BUILD_TIME } from './build-info'
 
@@ -23,6 +24,7 @@ export default function App() {
       case '/funspace': return 'Your favorite AI tool might be lying to you!'
       case '/demo': return 'Meme with a trust engine'
       case '/about': return 'Meme with a trust engine'
+      case '/whitepaper': return 'SONATE: Trust in the Age of Autonomy'
       default: return 'Trust Infra dressed as a meme coin'
     }
   }
@@ -101,6 +103,12 @@ export default function App() {
             >
               <span className="font-medium">Fun Space</span>
             </Link>
+            <Link
+              to="/whitepaper"
+              className={getLinkClass(path === '/whitepaper')}
+            >
+              <span className="font-medium">Whitepaper</span>
+            </Link>
           </div>
         </div>
       </nav>
@@ -123,6 +131,7 @@ export default function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/funspace" element={<FunSpace />} />
           <Route path="/demo" element={<DemoEmbed />} />
+          <Route path="/whitepaper" element={<Whitepaper />} />
         </Routes>
       </main>
 
