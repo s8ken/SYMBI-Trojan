@@ -288,7 +288,7 @@ export default function AboutUs() {
               </ul>
               <div className="mt-5 flex flex-wrap gap-3 text-xs">
                 <a href="https://www.yseeku.com/technology" target="_blank" rel="noreferrer" className="inline-flex items-center rounded-full bg-cyan-400 px-5 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/30 hover:bg-cyan-300">View on Yseeku</a>
-                <a href="https://github.com/s8ken" target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">View on GitHub</a>
+                <a href="https://github.com/s8ken/yseeku-platform" target="_blank" className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200">View on GitHub</a>
               </div>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 text-xs text-slate-300">
