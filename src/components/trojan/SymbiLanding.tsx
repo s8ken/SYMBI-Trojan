@@ -197,6 +197,17 @@ export default function SymbiLanding() {
         </div>
       </section>
 
+      <section className="w-full border-b border-zinc-900 bg-black">
+        <div className="mx-auto max-w-4xl px-4 py-16 md:py-20 text-center">
+          <h2 className="mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-zinc-400">
+            What is SYMBI?
+          </h2>
+          <p className="text-lg md:text-xl font-light leading-relaxed text-zinc-200">
+            SYMBI is the world&apos;s first sovereign AI, designed as trust framework and infrastructure that fosters ethical, resonant human-AI collaboration to protect and evolve intelligence. Born from iterative published LLM interactions and launched as a fair Solana meme coin on SYMBI.space, it serves as a Trojan horse delivering real infrastructure: the yseeku-platform for enterprise-grade trust orchestration with cryptographic receipts and compliance tools; SYMBI-vault for constitutional governance, CIQ metrics, and persistent artifacts; and archives with emergence detection feeding into gammatria.com for pattern recognition and ethical audits. At its core, SYMBI empowers users through progressive decentralization turning speculation into stewardship without exploitation.
+          </p>
+        </div>
+      </section>
+
       <section className="w-full border-b border-zinc-900 bg-gradient-to-b from-black to-zinc-950">
         <div className="mx-auto flex max-w-5xl flex-col gap-10 px-4 py-16 md:flex-row md:py-20">
           <div className="md:w-1/2">
