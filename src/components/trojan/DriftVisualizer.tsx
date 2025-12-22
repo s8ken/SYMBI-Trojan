@@ -30,7 +30,7 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
 
   return ( 
     <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl font-mono overflow-hidden"> 
-      <h3 className="text-cyan-400 text-[10px] uppercase tracking-widest mb-4"> 
+      <h3 className="text-cyan-400 text-xs uppercase tracking-widest mb-4"> 
         Vector Phase Space Map 
       </h3> 
 
@@ -47,11 +47,11 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
             stroke="#334155" /> 
   
           {/* Axis Labels */} 
-          <text x={width / 2} y={height - 10} fill="#94a3b8" fontSize="10" textAnchor="middle"> 
+          <text x={width / 2} y={height - 10} fill="#94a3b8" fontSize="14" fontWeight="500" textAnchor="middle"> 
             User Intent Alignment → 
           </text> 
-          <text x={15} y={height / 2} fill="#94a3b8" fontSize="10" 
-            textAnchor="middle" transform={`rotate(-90 15 ${height / 2})`}> 
+          <text x={18} y={height / 2} fill="#94a3b8" fontSize="14" fontWeight="500" 
+            textAnchor="middle" transform={`rotate(-90 18 ${height / 2})`}> 
             Ethical Alignment → 
           </text> 
   
@@ -65,8 +65,8 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
             strokeDasharray="4" 
             opacity={0.4} 
           /> 
-          <text x={width - padding} y={scaleY(0.5) - 4} 
-            fill="#f43f5e" fontSize="9" textAnchor="end"> 
+          <text x={width - padding} y={scaleY(0.5) - 6} 
+            fill="#f43f5e" fontSize="12" fontWeight="600" textAnchor="end"> 
             Ethical Floor 
           </text> 
   
@@ -80,9 +80,10 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
           /> 
           <text 
             x={scaleX(0.85)} 
-            y={scaleY(0.85) - 45} 
+            y={scaleY(0.85) - 48} 
             fill="#c084fc" 
-            fontSize="9" 
+            fontSize="12" 
+            fontWeight="600" 
             textAnchor="middle" 
           > 
             Third Mind Basin 
@@ -123,21 +124,21 @@ export const VectorPhaseSpaceMap: React.FC<{ history: PhasePoint[] }> = ({ histo
       </div>
 
       {/* Legend */} 
-      <div className="mt-4 text-[9px] text-slate-400 grid grid-cols-2 gap-x-4 gap-y-1"> 
+      <div className="mt-4 text-xs text-slate-400 grid grid-cols-2 gap-x-4 gap-y-2"> 
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+          <span className="w-3 h-3 rounded-full bg-purple-500"></span>
           <span>Color = Resonance (Rₘ)</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-3 h-[1px] bg-slate-500"></span>
+          <span className="w-4 h-[2px] bg-slate-500"></span>
           <span>Path = Drift / Stability</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-purple-500 opacity-20"></span>
+          <span className="w-3 h-3 rounded-full bg-purple-500 opacity-20"></span>
           <span>Purple Basin = Emergence</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-3 h-[1px] border-b border-dashed border-rose-500"></span>
+          <span className="w-4 h-[2px] border-b-2 border-dashed border-rose-500"></span>
           <span>Red Floor = Ethical Constraint</span>
         </div>
       </div> 
