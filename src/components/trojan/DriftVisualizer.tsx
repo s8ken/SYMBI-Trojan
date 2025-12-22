@@ -33,10 +33,14 @@ import React, { useState, useEffect } from 'react';
          {/* The "Center of Gravity" (Scaffold) */} 
          <div className="absolute top-1/2 left-1/2 w-4 h-4 -ml-2 -mt-2 border border-cyan-500/50 rounded-full animate-ping" /> 
          <div className="absolute top-1/2 left-1/2 w-1 h-1 -ml-0.5 -mt-0.5 bg-cyan-400 rounded-full" /> 
+         <div className="absolute top-1/2 left-1/2 ml-3 -mt-2 text-[8px] text-cyan-400/70 font-bold uppercase tracking-tighter">Intentional Scaffold</div>
  
          {/* The Resonant Emergence Point (Third Mind) */} 
          {metrics.emergence > 0.6 && ( 
-           <div className="absolute top-1/4 left-3/4 w-8 h-8 -ml-4 -mt-4 bg-purple-500/20 rounded-full blur-xl animate-pulse" /> 
+           <>
+             <div className="absolute top-1/4 left-3/4 w-8 h-8 -ml-4 -mt-4 bg-purple-500/20 rounded-full blur-xl animate-pulse" /> 
+             <div className="absolute top-1/4 left-3/4 ml-5 -mt-1 text-[8px] text-purple-400 font-bold uppercase tracking-tighter">Resonant Node</div>
+           </>
          )} 
  
          {/* The AI Vector (The Particle) */} 
@@ -45,6 +49,9 @@ import React, { useState, useEffect } from 'react';
            style={{ left: `${position.x}%`, top: `${position.y}%` }} 
          > 
             <div className="absolute inset-0 w-full h-full rounded-full animate-ping opacity-20 bg-current" /> 
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 whitespace-nowrap text-[9px] font-bold uppercase tracking-tight text-white/90 drop-shadow-md">
+              AI Vector Path
+            </div>
          </div> 
  
          {/* SVG Connector (The Elastic Bond) */} 
