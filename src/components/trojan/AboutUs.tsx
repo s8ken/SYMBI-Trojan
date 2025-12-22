@@ -1,4 +1,5 @@
 import React from 'react'
+import DriftVisualizer from './DriftVisualizer'
 
 export default function AboutUs() {
   return (
@@ -153,8 +154,8 @@ export default function AboutUs() {
               <p className="mt-2 text-xs text-slate-400">This gives enterprises and regulators a continuous, audit-friendly picture of how autonomous systems behave across days, weeks and lifecycles.</p>
             </div>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3">
-              <div className="flex h-48 w-full items-center justify-center rounded-xl border border-slate-800/80 bg-slate-950">
-                <span className="text-xs text-slate-600">Drift & Emergence Visualizer</span>
+              <div className="h-48 w-full overflow-hidden">
+                <DriftVisualizer />
               </div>
             </div>
           </div>
