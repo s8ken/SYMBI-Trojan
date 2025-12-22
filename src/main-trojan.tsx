@@ -16,6 +16,12 @@ const network = WalletAdapterNetwork.Mainnet
 const endpoint = 'https://api.mainnet-beta.solana.com'
 const wallets = [new PhantomWalletAdapter()]
 
+// Hydration logic: Remove LLM fallback when JS loads
+const fallback = document.getElementById('llm-fallback');
+if (fallback) {
+  fallback.style.display = 'none';
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ConnectionProvider endpoint={endpoint}>

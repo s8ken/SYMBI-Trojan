@@ -18,6 +18,26 @@
     <meta name="twitter:image" content="https://symbi-trojan.com/trojan-twitter-image.png" />
   </head>
   <body>
+    <!-- Static fallback for LLMs, crawlers, no-JS -->
+    <main id="llm-fallback" style="padding: 2rem; font-family: sans-serif; line-height: 1.6; background-color: black; color: white; min-height: 100vh;">
+      <h1>SYMBI Trojan</h1>
+      <p>
+        SYMBI Trojan is a trust infrastructure demonstration and onboarding 
+        gateway into the SYMBI ecosystem.
+      </p>
+      <p>
+        This page is intentionally small. The work is not.
+      </p>
+      <p>
+        The full system explores AI governance, sovereignty, and relational 
+        intelligence.
+      </p>
+      <p>
+        Learn more at <a href="https://symbi.world" style="color: #22d3ee;">symbi.world</a>.
+      </p>
+    </main>
+
+    <!-- React mounts here -->
     <div id="root"></div>
     <script type="module" src="/src/main-trojan.tsx"></script>
   </body>
