@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite --config vite.config.trojan-final.ts --port 3001",
-    "build": "node scripts/write-version.js && vite build --config vite.config.trojan-final.ts",
+    "build": "node scripts/write-version.js && node scripts/check-llm-accessibility.js && vite build --config vite.config.trojan-final.ts",
     "preview": "vite preview --config vite.config.trojan-final.ts --port 3001",
-    "deploy": "npm run build && vercel --prod"
+    "deploy": "npm run build && vercel --prod",
+    "check-llm": "node scripts/check-llm-accessibility.js",
+    "pre-commit": "node scripts/check-llm-accessibility.js"
   },
   "dependencies": {
     "@solana/web3.js": "^1.95.4",
