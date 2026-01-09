@@ -20,7 +20,7 @@
     "@solana/wallet-adapter-wallets": "^0.19.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0",
+    "react-router-dom": "^6.30.3",
     "lucide-react": "^0.456.0",
     "recharts": "^2.13.3",
     "sonner": "^1.7.0",
